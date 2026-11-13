@@ -6,6 +6,8 @@ data/**
 *.pdf
 SupeRR_Selector_Season2_Report.pdf
 RR_Auction_Dashboard.html
+*.ipynb
+SupeRR_Selector_Season2_Analysis.ipynb
 outputs/
 results/
 
