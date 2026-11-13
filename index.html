@@ -28,26 +28,6 @@
     --shadow: 0 4px 20px rgba(2, 29, 69, 0.08);
   }
 
-  body.dark {
-    --bg: #060918;
-    --surface: #0C1226;
-    --surface-2: #141C38;
-    --border: #1E294B;
-    --navy: #FFFFFF;
-    --navy-light: #CBE0FF;
-    --text: #F8FAFC;
-    --text-muted: #94A3B8;
-    --pink: #FF3DB5;
-    --pink-soft: rgba(229, 6, 149, 0.16);
-    --blue: #60A5FA;
-    --blue-soft: rgba(59, 130, 246, 0.16);
-    --green: #34D399;
-    --green-soft: rgba(16, 185, 129, 0.16);
-    --amber: #FBBF24;
-    --amber-soft: rgba(245, 158, 11, 0.16);
-    --shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
-  }
-
   * { box-sizing: border-box; }
   body {
     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -761,10 +741,6 @@
     </div>
 
     <div class="hdr-actions">
-      <button class="btn" id="themeBtn" onclick="toggleTheme()">
-        <svg class="icon-svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-        Theme
-      </button>
       <a href="SupeRR_Selector_Season2_Report.pdf" class="btn primary" target="_blank" download>
         <svg class="icon-svg" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         Download Dossier PDF
@@ -1136,16 +1112,9 @@ let currentCategory = "all";
 let currentDossierIndex = 0;
 let currentScatterMode = "all";
 
-function toggleTheme() {
-  document.body.classList.toggle("dark");
-  const isDark = document.body.classList.contains("dark");
-  localStorage.setItem("rr_theme", isDark ? "dark" : "light");
-  drawScatterPlot();
-}
+// Ensure clean default theme
+try { localStorage.removeItem("rr_theme"); } catch(e) {}
 
-if (localStorage.getItem("rr_theme") === "dark") {
-  document.body.classList.add("dark");
-}
 
 function switchTab(tabId) {
   const tabs = ["tab-cards", "tab-dossier", "tab-audit", "tab-squeeze", "tab-scatter", "tab-table"];
@@ -1471,7 +1440,7 @@ function drawScatterPlot() {
   const h = canvas.height;
   ctx.clearRect(0, 0, w, h);
 
-  const isDark = document.body.classList.contains("dark");
+  
   const m = { top: 40, right: 40, bottom: 50, left: 65 };
   const pw = w - m.left - m.right;
   const ph = h - m.top - m.bottom;
@@ -1503,41 +1472,41 @@ function drawScatterPlot() {
   const midY = toY(yZero); // Zero par threshold
 
   // Q1: Top Right (Elite Match-Winners)
-  ctx.fillStyle = isDark ? "rgba(16, 185, 129, 0.08)" : "rgba(220, 252, 231, 0.55)";
+  ctx.fillStyle = "rgba(220, 252, 231, 0.55)";
   ctx.fillRect(midX, m.top, m.left + pw - midX, midY - m.top);
 
   // Q2: Top Left (High Impact Volatiles)
-  ctx.fillStyle = isDark ? "rgba(245, 158, 11, 0.07)" : "rgba(254, 243, 199, 0.50)";
+  ctx.fillStyle = "rgba(254, 243, 199, 0.50)";
   ctx.fillRect(m.left, m.top, midX - m.left, midY - m.top);
 
   // Q3: Bottom Right (Calm Par Anchors)
-  ctx.fillStyle = isDark ? "rgba(59, 130, 246, 0.07)" : "rgba(239, 246, 255, 0.55)";
+  ctx.fillStyle = "rgba(239, 246, 255, 0.55)";
   ctx.fillRect(midX, midY, m.left + pw - midX, m.top + ph - midY);
 
   // Q4: Bottom Left (Rotation Depth)
-  ctx.fillStyle = isDark ? "rgba(100, 116, 139, 0.06)" : "rgba(241, 245, 249, 0.50)";
+  ctx.fillStyle = "rgba(241, 245, 249, 0.50)";
   ctx.fillRect(m.left, midY, midX - m.left, m.top + ph - midY);
 
   // Quadrant Overlay Watermark Labels
   ctx.font = "bold 9.5pt Montserrat, sans-serif";
   ctx.textAlign = "right";
-  ctx.fillStyle = isDark ? "rgba(16, 185, 129, 0.35)" : "rgba(16, 185, 129, 0.65)";
+  ctx.fillStyle = "rgba(16, 185, 129, 0.65)";
   ctx.fillText("QUADRANT I: ELITE CLUTCH CLOSERS (Priority Bids)", m.left + pw - 12, m.top + 22);
 
   ctx.textAlign = "left";
-  ctx.fillStyle = isDark ? "rgba(245, 158, 11, 0.35)" : "rgba(217, 119, 6, 0.65)";
+  ctx.fillStyle = "rgba(217, 119, 6, 0.65)";
   ctx.fillText("QUADRANT II: EXPLOSIVE IMPACT WEAPONS", m.left + 12, m.top + 22);
 
   ctx.textAlign = "right";
-  ctx.fillStyle = isDark ? "rgba(59, 130, 246, 0.35)" : "rgba(37, 99, 235, 0.65)";
+  ctx.fillStyle = "rgba(37, 99, 235, 0.65)";
   ctx.fillText("QUADRANT III: CALM DEFENSIVE ANCHORS", m.left + pw - 12, m.top + ph - 14);
 
   ctx.textAlign = "left";
-  ctx.fillStyle = isDark ? "rgba(148, 163, 184, 0.35)" : "rgba(100, 116, 139, 0.65)";
+  ctx.fillStyle = "rgba(100, 116, 139, 0.65)";
   ctx.fillText("QUADRANT IV: SQUAD DEPTH ROTATION", m.left + 12, m.top + ph - 14);
 
   // Grid Lines
-  ctx.strokeStyle = isDark ? "#1E294B" : "#E2E8F0";
+  ctx.strokeStyle = "#E2E8F0";
   ctx.lineWidth = 1;
   ctx.beginPath();
   for (let x = 40; x <= 100; x += 10) {
@@ -1554,7 +1523,7 @@ function drawScatterPlot() {
   ctx.stroke();
 
   // Crosshair Threshold Dotted Lines
-  ctx.strokeStyle = isDark ? "#FF3DB5" : "#E50695";
+  ctx.strokeStyle = "#E50695";
   ctx.lineWidth = 1.6;
   ctx.setLineDash([4, 4]);
   ctx.beginPath();
@@ -1568,7 +1537,7 @@ function drawScatterPlot() {
   ctx.setLineDash([]);
 
   // Axis Labels & Ticks
-  ctx.fillStyle = isDark ? "#94A3B8" : "#64748B";
+  ctx.fillStyle = "#64748B";
   ctx.font = "bold 8.2pt Montserrat, sans-serif";
   ctx.textAlign = "center";
   for (let x = 40; x <= 100; x += 10) {
@@ -1622,7 +1591,7 @@ function drawScatterPlot() {
     ctx.stroke();
 
     // Name text
-    ctx.fillStyle = isDark ? "#FFFFFF" : "#021D45";
+    ctx.fillStyle = "#021D45";
     ctx.font = "bold 8pt Montserrat, sans-serif";
     ctx.textAlign = "left";
     ctx.fillText(p.name.split(' ')[0], px + radius + 3, py + 3);
