@@ -1,0 +1,24 @@
+# Dataset folder (Unstop hackathon data pack - competition confidentiality rule)
+data/
+data/**
+
+# Competition Results & Final Submission Artifacts (Embargoed until submission closes)
+*.pdf
+SupeRR_Selector_Season2_Report.pdf
+SupeRR_Selector_Season2_Reportreal.pdf
+RR_Auction_Dashboard.html
+outputs/
+results/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Python cache & compiled bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Temporary & system files
+.DS_Store
+Thumbs.db
+*.tmp
