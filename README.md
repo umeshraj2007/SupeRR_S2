@@ -9,13 +9,15 @@
 [![Author: Umeshraj Parkunan](https://img.shields.io/badge/Author-Umeshraj_Parkunan-E50695?style=flat&logo=github)](https://github.com/umeshraj2007)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Umeshraj_Parkunan-0077B5?style=flat&logo=linkedin)](https://www.linkedin.com/in/umeshraj-parkunan/)
 [![GitHub Repo](https://img.shields.io/badge/Repository-umeshraj2007%2FSupeRR__S2-021D45?style=flat&logo=github)](https://github.com/umeshraj2007/SupeRR_S2)
+[![Live Dashboard](https://img.shields.io/badge/Live_Dashboard-GitHub_Pages-E50695?style=flat&logo=googlechrome&logoColor=white)](https://umeshraj2007.github.io/SupeRR_S2/)
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![Competition](https://img.shields.io/badge/Unstop-SupeRR_Selector_S2-0052CC)](https://unstop.com/hackathons/crp-superr-selector-season-2-help-shape-rajasthan-royals-ipl-2027-auction-strategy-rajasthan-royals-1792758)
 
 **Author:** Umeshraj Parkunan  
 **GitHub Repository:** [github.com/umeshraj2007/SupeRR_S2](https://github.com/umeshraj2007/SupeRR_S2)  
+**Live Interactive Dashboard:** [https://umeshraj2007.github.io/SupeRR_S2/](https://umeshraj2007.github.io/SupeRR_S2/)  
 **LinkedIn Profile:** [linkedin.com/in/umeshraj-parkunan](https://www.linkedin.com/in/umeshraj-parkunan/)  
-**Key Deliverables:** [Boardroom PDF Dossier (22 Pages)](SupeRR_Selector_Season2_Report.pdf) • [Interactive War Room Dashboard](RR_Auction_Dashboard.html) • [Jupyter Analysis Notebook](SupeRR_Selector_Season2_Analysis.ipynb)
+**Key Deliverables:** [Live Interactive Dashboard](https://umeshraj2007.github.io/SupeRR_S2/) • [Boardroom PDF Dossier (22 Pages)](SupeRR_Selector_Season2_Report.pdf) • [Jupyter Analysis Notebook](SupeRR_Selector_Season2_Analysis.ipynb)
 
 > [!IMPORTANT]
 > **Submission Embargo & Confidentiality Notice:**  
@@ -413,7 +415,10 @@ python -m nbclient SupeRR_Selector_Season2_Analysis.ipynb
 ```
 
 ### 2. View the Interactive Dashboard
-Open `RR_Auction_Dashboard.html` directly in any modern browser:
+The war-room dashboard is hosted live on GitHub Pages:
+👉 **[https://umeshraj2007.github.io/SupeRR_S2/](https://umeshraj2007.github.io/SupeRR_S2/)**
+
+Alternatively, open `RR_Auction_Dashboard.html` locally in any modern browser:
 ```bash
 start RR_Auction_Dashboard.html
 ```
