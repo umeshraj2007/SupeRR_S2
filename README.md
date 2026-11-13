@@ -19,7 +19,7 @@
 
 > [!IMPORTANT]
 > **Submission Embargo & Confidentiality Notice:**  
-> In accordance with competition rules and evaluation fairness, raw match datasets (`./data/`), final submission artifacts, and compiled dossiers are protected under repository embargo rules via `.gitignore`. The complete reproduction pipeline, analytical models, and interactive dashboard code will be formally unveiled in this repository upon the conclusion of the evaluation period.
+> In accordance with competition rules and evaluation fairness, raw match datasets (`./data/`), final submission artifacts, the analytical Jupyter notebook (`SupeRR_Selector_Season2_Analysis.ipynb`), and compiled dossiers are protected under repository embargo rules via `.gitignore`. The complete reproduction pipeline, analytical models, and interactive dashboard code will be formally unveiled in this repository upon the conclusion of the evaluation period.
 
 ---
 
@@ -39,9 +39,9 @@ Our empirical findings uncovered RR's critical 2026 vulnerability: conceding an 
 SupeRR/
 ├── .gitignore                                 # Protects confidential ./data/ and Python artifacts
 ├── README.md                                  # Comprehensive codebase & scouting documentation
-├── RR_Auction_Dashboard.html                  # Interactive War Room Dashboard (Zero emojis, SVG icons, author attribution, dynamic matrix)
-├── SupeRR_Selector_Season2_Analysis.ipynb     # 13-cell pre-executed end-to-end data pipeline
-├── SupeRR_Selector_Season2_Report.pdf         # 22-page Executive Boardroom PDF Report
+├── RR_Auction_Dashboard.html                  # Interactive War Room Dashboard (Embargoed under .gitignore)
+├── SupeRR_Selector_Season2_Analysis.ipynb     # 13-cell pre-executed end-to-end data pipeline (Embargoed under .gitignore)
+├── SupeRR_Selector_Season2_Report.pdf         # 22-page Executive Boardroom PDF Report (Embargoed under .gitignore)
 ├── SupeRR_Selector_Season2_Reportreal.pdf     # Original benchmark report safely preserved
 ├── images/                                    # 26 High-resolution scouting cards and visual charts
 │   ├── rr_logo.png
