@@ -423,11 +423,10 @@ Alternatively, open `RR_Auction_Dashboard.html` locally in any modern browser:
 start RR_Auction_Dashboard.html
 ```
 Features include:
-* **Author Attribution & Tactical Controls:** Clean executive header featuring author profile metadata, theme switcher, and instant PDF dossier download.
+* **Author Attribution & Tactical Controls:** Clean executive header featuring author profile metadata and instant PDF dossier download.
 * **4-Quadrant Interactive Matrix:** Real-time scatter plot with discipline toggle (Batters SR Edge, Bowlers Runs Saved, Combined View).
 * **Player Dossiers Playbook:** Interactive dropdown matching the exact PDF card format.
 * **Squad Squeeze & Compliance Tables:** 10 IPL franchises roster limits and trade targets.
-* **Light / Dark Theme Support:** Instant toggle with zero lag and zero external CDN dependencies.
 
 ---
 
@@ -459,7 +458,7 @@ Copy-paste these verified values directly into the [Unstop Portal](https://unsto
 **Upload Your Report \***: Upload `SupeRR_Selector_Season2_Report.pdf`  
 **Dashboard Link**:
 ```text
-https://github.com/umeshraj2007/SupeRR_S2 (Interactive War Room Dashboard featuring 4-Quadrant Dynamic Par Edge vs Consistency Matrix, RR 2026 Squad Audit, IPL Squad Compliance Squeeze, Author Attribution Identity, and 20 Uncapped Player Dossiers. Self-contained HTML with dark/light themes and zero external dependencies).
+https://github.com/umeshraj2007/SupeRR_S2 (Interactive War Room Dashboard featuring 4-Quadrant Dynamic Par Edge vs Consistency Matrix, RR 2026 Squad Audit, IPL Squad Compliance Squeeze, Author Attribution Identity, and 20 Uncapped Player Dossiers. Self-contained HTML with crisp executive styling and zero external dependencies).
 ```
 
 ---
