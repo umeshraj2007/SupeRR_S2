@@ -5,14 +5,8 @@ data/**
 # Competition Results & Final Submission Artifacts (Embargoed until submission closes)
 *.pdf
 SupeRR_Selector_Season2_Report.pdf
-RR_Auction_Dashboard.html
-*.ipynb
-SupeRR_Selector_Season2_Analysis.ipynb
 outputs/
 results/
-
-# Jupyter Notebook checkpoints
-.ipynb_checkpoints/
 
 # Python cache & compiled bytecode
 __pycache__/
@@ -23,3 +17,12 @@ __pycache__/
 .DS_Store
 Thumbs.db
 *.tmp
+.ipynb_checkpoints/
+
+#Other Files to ignore
+video-production/
+video-production/**
+.agents/
+.agents/**
+
+skills-lock.json
