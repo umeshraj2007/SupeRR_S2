@@ -29,25 +29,31 @@
   }
 
   * { box-sizing: border-box; }
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
   body {
     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background: var(--bg);
     color: var(--text);
-    margin: 0;
-    padding: 0;
     line-height: 1.5;
     transition: background 0.25s ease, color 0.25s ease;
   }
 
-  /* HEADER */
+  /* HEADER & TOP NAVBAR */
   header {
-    background: var(--surface);
-    border-bottom: 2px solid var(--border);
-    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 24px;
     position: sticky;
     top: 0;
-    z-index: 40;
-    box-shadow: var(--shadow);
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(2, 29, 69, 0.04);
   }
   .hdr-inner {
     max-width: 1440px;
@@ -55,50 +61,70 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 16px;
-    flex-wrap: wrap;
+    gap: 18px;
+    flex-wrap: nowrap;
   }
   .logo-block {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 12px;
+    min-width: 0;
+    flex-shrink: 1;
   }
   .logo-img {
-    height: 48px;
+    height: 44px;
     width: auto;
+    flex-shrink: 0;
+  }
+  .title-text {
+    min-width: 0;
   }
   .title-text h1 {
-    font-size: 14pt;
+    font-size: 1.15rem;
     font-weight: 900;
     color: var(--navy);
     margin: 0;
     letter-spacing: -0.02em;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .title-text p {
-    font-size: 8pt;
-    font-weight: 600;
+    font-size: 0.68rem;
+    font-weight: 700;
     color: var(--pink);
-    margin: 0;
+    margin: 2px 0 0 0;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
-  /* AUTHOR IDENTITY BLOCK (Formal & Clean) */
+  /* AUTHOR IDENTITY & HEADER ACTIONS */
+  .hdr-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+  }
   .author-block {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 9px;
     background: var(--surface-2);
     border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 6px 12px;
+    border-radius: 24px;
+    padding: 4px 12px 4px 5px;
+    transition: all 0.2s ease;
+  }
+  .author-block:hover {
+    border-color: var(--pink);
+    box-shadow: 0 2px 8px rgba(229, 6, 149, 0.12);
   }
   .author-avatar {
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
     border: 2px solid var(--pink);
     object-fit: cover;
@@ -108,15 +134,16 @@
     flex-direction: column;
   }
   .author-name {
-    font-size: 8.6pt;
+    font-size: 0.8rem;
     font-weight: 800;
     color: var(--navy);
+    line-height: 1.1;
   }
   .author-links {
     display: flex;
     align-items: center;
     gap: 6px;
-    font-size: 7.4pt;
+    font-size: 0.66rem;
     margin-top: 1px;
   }
   .author-links a {
@@ -133,11 +160,12 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    flex-shrink: 0;
   }
   .btn {
     padding: 6px 14px;
-    border-radius: 6px;
-    font-size: 8.2pt;
+    border-radius: 20px;
+    font-size: 0.78rem;
     font-weight: 700;
     cursor: pointer;
     border: 1px solid var(--border);
@@ -148,6 +176,7 @@
     align-items: center;
     gap: 6px;
     text-decoration: none;
+    white-space: nowrap;
   }
   .btn:hover {
     border-color: var(--pink);
@@ -156,11 +185,25 @@
   .btn.primary {
     background: var(--pink);
     color: #FFF;
-    border-color: var(--pink);
+    border: 1px solid var(--pink);
+    box-shadow: 0 2px 8px rgba(229, 6, 149, 0.25);
   }
   .btn.primary:hover {
     background: #C4047D;
     color: #FFF;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(229, 6, 149, 0.35);
+  }
+  
+  @media (max-width: 1024px) {
+    .title-text p { display: none; }
+    .author-links { display: none; }
+    .author-block { padding: 4px 10px 4px 6px; }
+  }
+  @media (max-width: 768px) {
+    header { padding: 8px 16px; }
+    .hdr-inner { flex-wrap: wrap; justify-content: center; }
+    .author-block { display: none; }
   }
   .icon-svg {
     width: 14px;
@@ -179,6 +222,9 @@
     background: var(--surface);
     border-bottom: 1px solid var(--border);
     padding: 0 24px;
+    position: sticky;
+    top: 61px;
+    z-index: 90;
   }
   .nav-inner {
     max-width: 1440px;
@@ -186,6 +232,10 @@
     display: flex;
     gap: 4px;
     overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .nav-inner::-webkit-scrollbar {
+    display: none;
   }
   .nav-tab {
     padding: 10px 16px;
@@ -1431,17 +1481,27 @@ function setScatterMode(mode) {
 function drawScatterPlot() {
   const canvas = document.getElementById("scatterCanvas");
   if (!canvas) return;
-  if (canvas.clientWidth && canvas.clientWidth > 400) {
-    canvas.width = canvas.clientWidth;
-    canvas.height = 480;
-  }
+
+  const containerWidth = canvas.parentElement ? canvas.parentElement.clientWidth : 1020;
+  const displayWidth = Math.max(640, containerWidth);
+  const displayHeight = Math.min(580, Math.max(460, Math.round(displayWidth * 0.46)));
+
+  const dpr = window.devicePixelRatio || 1;
+  canvas.width = displayWidth * dpr;
+  canvas.height = displayHeight * dpr;
+  canvas.style.width = displayWidth + "px";
+  canvas.style.height = displayHeight + "px";
+
   const ctx = canvas.getContext("2d");
-  const w = canvas.width;
-  const h = canvas.height;
+  if (ctx.resetTransform) ctx.resetTransform();
+  else ctx.setTransform(1, 0, 0, 1, 0, 0);
+  ctx.scale(dpr, dpr);
+
+  const w = displayWidth;
+  const h = displayHeight;
   ctx.clearRect(0, 0, w, h);
 
-  
-  const m = { top: 40, right: 40, bottom: 50, left: 65 };
+  const m = { top: 40, right: 45, bottom: 50, left: 65 };
   const pw = w - m.left - m.right;
   const ph = h - m.top - m.bottom;
 
@@ -1463,7 +1523,7 @@ function drawScatterPlot() {
     playersToPlot = PLAYERS;
   }
 
-  const xMin = 35, xMax = 105;
+  const xMin = 33, xMax = 108;
   const toX = val => m.left + ((val - xMin) / (xMax - xMin)) * pw;
   const toY = val => m.top + ph - ((val - yMin) / (yMax - yMin)) * ph;
 
@@ -1472,7 +1532,7 @@ function drawScatterPlot() {
   const midY = toY(yZero); // Zero par threshold
 
   // Q1: Top Right (Elite Match-Winners)
-  ctx.fillStyle = "rgba(220, 252, 231, 0.55)";
+  ctx.fillStyle = "rgba(220, 252, 231, 0.60)";
   ctx.fillRect(midX, m.top, m.left + pw - midX, midY - m.top);
 
   // Q2: Top Left (High Impact Volatiles)
@@ -1480,30 +1540,30 @@ function drawScatterPlot() {
   ctx.fillRect(m.left, m.top, midX - m.left, midY - m.top);
 
   // Q3: Bottom Right (Calm Par Anchors)
-  ctx.fillStyle = "rgba(239, 246, 255, 0.55)";
+  ctx.fillStyle = "rgba(239, 246, 255, 0.60)";
   ctx.fillRect(midX, midY, m.left + pw - midX, m.top + ph - midY);
 
   // Q4: Bottom Left (Rotation Depth)
   ctx.fillStyle = "rgba(241, 245, 249, 0.50)";
   ctx.fillRect(m.left, midY, midX - m.left, m.top + ph - midY);
 
-  // Quadrant Overlay Watermark Labels
+  // Quadrant Overlay Watermark Labels (Inset to prevent point collisions)
   ctx.font = "bold 9.5pt Montserrat, sans-serif";
   ctx.textAlign = "right";
-  ctx.fillStyle = "rgba(16, 185, 129, 0.65)";
-  ctx.fillText("QUADRANT I: ELITE CLUTCH CLOSERS (Priority Bids)", m.left + pw - 12, m.top + 22);
+  ctx.fillStyle = "rgba(16, 185, 129, 0.75)";
+  ctx.fillText("QUADRANT I: ELITE CLUTCH CLOSERS (Priority Bids)", m.left + pw - 12, m.top + 20);
 
   ctx.textAlign = "left";
-  ctx.fillStyle = "rgba(217, 119, 6, 0.65)";
-  ctx.fillText("QUADRANT II: EXPLOSIVE IMPACT WEAPONS", m.left + 12, m.top + 22);
+  ctx.fillStyle = "rgba(217, 119, 6, 0.75)";
+  ctx.fillText("QUADRANT II: EXPLOSIVE IMPACT WEAPONS", m.left + 12, m.top + 20);
 
   ctx.textAlign = "right";
-  ctx.fillStyle = "rgba(37, 99, 235, 0.65)";
-  ctx.fillText("QUADRANT III: CALM DEFENSIVE ANCHORS", m.left + pw - 12, m.top + ph - 14);
+  ctx.fillStyle = "rgba(37, 99, 235, 0.75)";
+  ctx.fillText("QUADRANT III: CALM DEFENSIVE ANCHORS", m.left + pw - 12, m.top + ph - 8);
 
   ctx.textAlign = "left";
-  ctx.fillStyle = "rgba(100, 116, 139, 0.65)";
-  ctx.fillText("QUADRANT IV: SQUAD DEPTH ROTATION", m.left + 12, m.top + ph - 14);
+  ctx.fillStyle = "rgba(100, 116, 139, 0.75)";
+  ctx.fillText("QUADRANT IV: SQUAD DEPTH ROTATION", m.left + 12, m.top + ph - 8);
 
   // Grid Lines
   ctx.strokeStyle = "#E2E8F0";
@@ -1524,8 +1584,8 @@ function drawScatterPlot() {
 
   // Crosshair Threshold Dotted Lines
   ctx.strokeStyle = "#E50695";
-  ctx.lineWidth = 1.6;
-  ctx.setLineDash([4, 4]);
+  ctx.lineWidth = 1.8;
+  ctx.setLineDash([5, 4]);
   ctx.beginPath();
   // Zero Par Line (Horizontal)
   ctx.moveTo(m.left, midY);
@@ -1560,6 +1620,21 @@ function drawScatterPlot() {
   ctx.fillText(yLabel, 0, 0);
   ctx.restore();
 
+  // Specific label offsets to prevent ANY text collision
+  const labelConfig = {
+    "Nehal Wadhera": { text: "Nehal Wadhera", ha: "center", va: "bottom", dx: 0, dy: -18 },
+    "Akash Madhwal": { text: "Akash Madhwal", ha: "left", va: "center", dx: 15, dy: -6 },
+    "Atharwa Taide": { text: "Atharwa Taide", ha: "right", va: "center", dx: -14, dy: 0 },
+    "Angkrish Raghuvanshi": { text: "Angkrish Raghuvanshi", ha: "left", va: "top", dx: 14, dy: 10 },
+    "M Shahrukh Khan": { text: "M. Shahrukh", ha: "left", va: "center", dx: 16, dy: 0 },
+    "Ashutosh Sharma": { text: "Ashutosh Sharma", ha: "right", va: "center", dx: -16, dy: 0 },
+    "Rasikh Salam": { text: "Rasikh Salam", ha: "left", va: "center", dx: 16, dy: 4 },
+    "Arshad Khan": { text: "Arshad Khan", ha: "right", va: "center", dx: -15, dy: 0 },
+    "Vipraj Nigam": { text: "Vipraj Nigam", ha: "right", va: "center", dx: -15, dy: 0 },
+    "Ayush Mhatre": { text: "Ayush Mhatre", ha: "right", va: "center", dx: -15, dy: 0 },
+    "Raghu Sharma": { text: "Raghu Sharma", ha: "right", va: "center", dx: -15, dy: 0 },
+  };
+
   // Plot Players
   playersToPlot.forEach(p => {
     const isBat = p.primary_mode === "bat";
@@ -1575,14 +1650,14 @@ function drawScatterPlot() {
     }
 
     const balls = modeObj.p_balls;
-    const radius = Math.max(7, Math.min(22, Math.sqrt(balls) * 0.85));
+    const radius = Math.max(7, Math.min(20, Math.sqrt(balls) * 0.85));
 
     const px = toX(xVal);
     const py = toY(yVal);
 
     // Glowing bubble fill
-    ctx.fillStyle = isBat ? "rgba(229, 6, 149, 0.80)" : "rgba(18, 38, 170, 0.80)";
-    ctx.strokeStyle = isBat ? "#FF88C8" : "#93C5FD";
+    ctx.fillStyle = isBat ? "rgba(229, 6, 149, 0.85)" : "rgba(18, 38, 170, 0.85)";
+    ctx.strokeStyle = isBat ? "#9D174D" : "#1E3A8A";
     ctx.lineWidth = 1.8;
 
     ctx.beginPath();
@@ -1590,15 +1665,41 @@ function drawScatterPlot() {
     ctx.fill();
     ctx.stroke();
 
-    // Name text
-    ctx.fillStyle = "#021D45";
-    ctx.font = "bold 8pt Montserrat, sans-serif";
-    ctx.textAlign = "left";
-    ctx.fillText(p.name.split(' ')[0], px + radius + 3, py + 3);
+    // Determine label configuration
+    const cfg = labelConfig[p.name] || {
+      text: p.name.split(' ')[0],
+      ha: "left",
+      va: "center",
+      dx: radius + 4,
+      dy: 0
+    };
+
+    const lx = px + cfg.dx;
+    const ly = py + cfg.dy;
+
+    ctx.font = "bold 8.5pt Montserrat, sans-serif";
+    ctx.textAlign = cfg.ha;
+    ctx.textBaseline = cfg.va === "bottom" ? "bottom" : (cfg.va === "top" ? "top" : "middle");
+
+    // Measure text for subtle protective pill background
+    const metrics = ctx.measureText(cfg.text);
+    const tw = metrics.width;
+    const th = 13;
+    let bx = lx;
+    if (cfg.ha === "right") bx = lx - tw - 3;
+    else if (cfg.ha === "center") bx = lx - tw / 2 - 3;
+    else bx = lx - 3;
+    let by = ly - th / 2 - 1;
+
+    ctx.fillStyle = "rgba(255, 255, 255, 0.75)";
+    ctx.fillRect(bx, by, tw + 6, th + 2);
+
+    // Text render
+    ctx.fillStyle = isBat ? "#831843" : "#1E3A8A";
+    ctx.fillText(cfg.text, lx, ly);
   });
 }
 
-// Initialize
 populateDossierDropdown();
 populateAuditTables();
 populateSquadsTable();
