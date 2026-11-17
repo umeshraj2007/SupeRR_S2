@@ -756,6 +756,9 @@
   .close-modal:hover {
     color: var(--pink);
   }
+  .modal-content .run-bar {
+    padding-right: 36px;
+  }
 
   .hidden { display: none !important; }
 </style>
@@ -1334,7 +1337,7 @@ function renderDossierHTML(p, idx) {
 
     <!-- High-Definition Embedded Dashboard Card Image -->
     <div class="d-card-img-wrap">
-      <img src="${p.dash_img_b64}" alt="${p.name} Dashboard Card" class="d-card-img">
+      <img src="images/${p.file_name}" alt="${p.name} Dashboard Card" class="d-card-img">
     </div>
 
     <div class="d-sec-hdr" style="margin-top: 8px;">Recent Match-by-Match Performance Log (IPL &amp; International T20s)</div>
@@ -1344,7 +1347,7 @@ function renderDossierHTML(p, idx) {
     </table>
 
     <div class="d-note-box">
-      <strong>Note:</strong> ${p.narrative.note || ''}
+      <strong>Note:</strong> ${p.narrative.strategic_note || p.narrative.note || ''}
     </div>
   `;
 }
