@@ -36,41 +36,51 @@ comps = {r["comp_id"]: r for r in csv.DictReader(open(DATA_DIR + "/competitions.
 matches = {r["match_id"]: r for r in csv.DictReader(open(DATA_DIR + "/matches.csv", encoding="utf-8"))}
 teams_map = {r["team_id"]: r["team_name"] for r in csv.DictReader(open(DATA_DIR + "/teams.csv", encoding="utf-8"))}
 
-# 20 Uncapped Target Players (Post-Retention IPL 2027)
+# 20 Uncapped Target Players (Confirmed Available, Unretained for IPL 2027)
 TARGETS = [
     # Top 10 Batters
-    {"rank": 1, "name": "Ayush Mhatre", "id": "48504", "role": "Top-Order Stroke Maker", "cat": "Top 10 Batter", "team26": "Chennai Super Kings", "price_cr": 0.30, "apps26": 6, "hand": "RHS", "style": "Right-arm offbreak", "mode": "bat", "file_name": "bat_01_ayush_mhatre.png"},
-    {"rank": 2, "name": "Mahipal Lomror", "id": "4821", "role": "Middle-Order Spin Destroyer", "cat": "Top 10 Batter", "team26": "Royal Challengers Bengaluru", "price_cr": 7.25, "apps26": 10, "hand": "LHS", "style": "Slow left-arm orthodox", "mode": "bat", "file_name": "bat_02_mahipal_lomror.png"},
-    {"rank": 3, "name": "Kumar Kushagra", "id": "8251", "role": "Middle-Order Keeper-Batter", "cat": "Top 10 Batter", "team26": "Gujarat Titans", "price_cr": 7.20, "apps26": 4, "hand": "RHS", "style": "Wicketkeeper", "mode": "bat", "file_name": "bat_03_kumar_kushagra.png"},
-    {"rank": 4, "name": "M Shahrukh Khan", "id": "3782", "role": "Power Finisher / Off-Spinner", "cat": "Top 10 Batter", "team26": "Gujarat Titans", "price_cr": 4.00, "apps26": 9, "hand": "RHS", "style": "Right-arm offbreak", "mode": "bat", "file_name": "bat_04_m_shahrukh_khan.png"},
-    {"rank": 5, "name": "Atharwa Taide", "id": "6466", "role": "Top-Order Anchor / Opener", "cat": "Top 10 Batter", "team26": "Free Agent", "price_cr": None, "apps26": 0, "hand": "LHS", "style": "Slow left-arm orthodox", "mode": "bat", "file_name": "bat_05_atharwa_taide.png"},
-    {"rank": 6, "name": "Sameer Rizvi", "id": "8238", "role": "Explosive Middle-Order Hitter", "cat": "Top 10 Batter", "team26": "Delhi Capitals", "price_cr": 8.40, "apps26": 8, "hand": "RHS", "style": "Right-arm offbreak", "mode": "bat", "file_name": "bat_06_sameer_rizvi.png"},
-    {"rank": 7, "name": "Prerak Mankad", "id": "5029", "role": "All-Phase Pace All-Rounder", "cat": "Top 10 Batter", "team26": "Lucknow Super Giants", "price_cr": 0.20, "apps26": 5, "hand": "RHS", "style": "Right-arm medium", "mode": "bat", "is_ar": True, "file_name": "bat_07_prerak_mankad.png"},
-    {"rank": 8, "name": "Narayan Jagadeesan", "id": "5608", "role": "Top-Order Anchor & Keeper", "cat": "Top 10 Batter", "team26": "Kolkata Knight Riders", "price_cr": 0.20, "apps26": 6, "hand": "RHS", "style": "Wicketkeeper", "mode": "bat", "file_name": "bat_08_narayan_jagadeesan.png"},
-    {"rank": 9, "name": "Lalit Yadav", "id": "6671", "role": "Middle-Overs Spin All-Rounder", "cat": "Top 10 Batter", "team26": "Delhi Capitals", "price_cr": 0.65, "apps26": 7, "hand": "RHS", "style": "Right-arm offbreak", "mode": "bat", "is_ar": True, "file_name": "bat_09_lalit_yadav.png"},
-    {"rank": 10, "name": "Nehal Wadhera", "id": "7059", "role": "Middle-Order Power Anchor", "cat": "Top 10 Batter", "team26": "Punjab Kings", "price_cr": 4.20, "apps26": 8, "hand": "LHS", "style": "Right-arm legbreak", "mode": "bat", "file_name": "bat_10_nehal_wadhera.png"},
+    {"rank": 1, "name": "Mahipal Lomror", "id": "4821", "role": "Middle-Order Spin Destroyer", "cat": "Top 10 Batter", "team26": "Royal Challengers Bengaluru", "price_cr": 7.25, "hand": "LHS", "style": "Slow left-arm orthodox", "mode": "bat", "file_name": "bat_01_mahipal_lomror.png"},
+    {"rank": 2, "name": "Atharwa Taide", "id": "6466", "role": "Top-Order Anchor / Opener", "cat": "Top 10 Batter", "team26": "Sunrisers Hyderabad", "price_cr": None, "hand": "LHS", "style": "Slow left-arm orthodox", "mode": "bat", "file_name": "bat_02_atharwa_taide.png"},
+    {"rank": 3, "name": "Anmolpreet Singh", "id": "4817", "role": "Powerplay Stroke Maker", "cat": "Top 10 Batter", "team26": "Sunrisers Hyderabad", "price_cr": 0.20, "hand": "RHS", "style": "Right-arm offbreak", "mode": "bat", "file_name": "bat_03_anmolpreet_singh.png"},
+    {"rank": 4, "name": "M Shahrukh Khan", "id": "3782", "role": "Power Finisher / Off-Spinner", "cat": "Top 10 Batter", "team26": "Gujarat Titans", "price_cr": 4.00, "hand": "RHS", "style": "Right-arm offbreak", "mode": "bat", "file_name": "bat_04_m_shahrukh_khan.png"},
+    {"rank": 5, "name": "Prerak Mankad", "id": "5029", "role": "All-Phase Pace All-Rounder", "cat": "Top 10 Batter", "team26": "Lucknow Super Giants", "price_cr": 0.20, "hand": "RHS", "style": "Right-arm medium", "mode": "bat", "is_ar": True, "file_name": "bat_05_prerak_mankad.png"},
+    {"rank": 6, "name": "Abishek Porel", "id": "19714", "role": "Dynamic Wicketkeeper-Batter", "cat": "Top 10 Batter", "team26": "Delhi Capitals", "price_cr": 0.20, "hand": "LHS", "style": "Wicketkeeper", "mode": "bat", "file_name": "bat_06_abishek_porel.png"},
+    {"rank": 7, "name": "Narayan Jagadeesan", "id": "5608", "role": "Top-Order Anchor & Keeper", "cat": "Top 10 Batter", "team26": "Kolkata Knight Riders", "price_cr": 0.20, "hand": "RHS", "style": "Wicketkeeper", "mode": "bat", "file_name": "bat_07_narayan_jagadeesan.png"},
+    {"rank": 8, "name": "Lalit Yadav", "id": "6671", "role": "Middle-Overs Spin All-Rounder", "cat": "Top 10 Batter", "team26": "Delhi Capitals", "price_cr": 0.65, "hand": "RHS", "style": "Right-arm offbreak", "mode": "bat", "is_ar": True, "file_name": "bat_08_lalit_yadav.png"},
+    {"rank": 9, "name": "Hrithik Shokeen", "id": "27959", "role": "Off-Spin All-Rounder", "cat": "Top 10 Batter", "team26": "Mumbai Indians", "price_cr": 0.20, "hand": "RHS", "style": "Right-arm offbreak", "mode": "bat", "is_ar": True, "file_name": "bat_09_hrithik_shokeen.png"},
+    {"rank": 10, "name": "Nehal Wadhera", "id": "7059", "role": "Middle-Order Power Anchor", "cat": "Top 10 Batter", "team26": "Punjab Kings", "price_cr": 4.20, "hand": "LHS", "style": "Right-arm legbreak", "mode": "bat", "file_name": "bat_10_nehal_wadhera.png"},
 
     # Top 10 Bowlers
-    {"rank": 1, "name": "Raghu Sharma", "id": "6359", "role": "Leg-Break Googly Bowler", "cat": "Top 10 Bowler", "team26": "Mumbai Indians", "price_cr": 0.30, "apps26": 6, "hand": "RHS", "style": "Right-arm legbreak googly", "mode": "bowl", "file_name": "bowl_01_raghu_sharma.png"},
-    {"rank": 2, "name": "Ashwani Kumar", "id": "8634", "role": "Left-Arm Strike Pacer", "cat": "Top 10 Bowler", "team26": "Mumbai Indians", "price_cr": 0.30, "apps26": 3, "hand": "LHS", "style": "Left-arm fast-medium", "mode": "bowl", "file_name": "bowl_02_ashwani_kumar.png"},
-    {"rank": 3, "name": "Praful Hinge", "id": "25132", "role": "Right-Arm Express Pacer", "cat": "Top 10 Bowler", "team26": "Sunrisers Hyderabad", "price_cr": 0.30, "apps26": 7, "hand": "RHS", "style": "Right-arm fast", "mode": "bowl", "file_name": "bowl_03_praful_hinge.png"},
-    {"rank": 4, "name": "Sakib Hussain", "id": "35318", "role": "Right-Arm Fast Bowler", "cat": "Top 10 Bowler", "team26": "Sunrisers Hyderabad", "price_cr": 0.30, "apps26": 11, "hand": "RHS", "style": "Right-arm fast", "mode": "bowl", "file_name": "bowl_04_sakib_hussain.png"},
-    {"rank": 5, "name": "Digvesh Rathi", "id": "58134", "role": "Right-Arm Medium-Fast", "cat": "Top 10 Bowler", "team26": "Lucknow Super Giants", "price_cr": 0.30, "apps26": 10, "hand": "RHS", "style": "Right-arm medium-fast", "mode": "bowl", "file_name": "bowl_05_digvesh_rathi.png"},
-    {"rank": 6, "name": "Kuldeep Sen", "id": "7545", "role": "Hit-The-Deck Express Pacer", "cat": "Top 10 Bowler", "team26": "Free Agent", "price_cr": None, "apps26": 0, "hand": "RHS", "style": "Right-arm fast", "mode": "bowl", "file_name": "bowl_06_kuldeep_sen.png"},
-    {"rank": 7, "name": "Yash Punja", "id": "41503", "role": "Tall Bounce Seamer", "cat": "Top 10 Bowler", "team26": "Royal Challengers Bengaluru", "price_cr": 0.30, "apps26": 2, "hand": "RHS", "style": "Right-arm fast-medium", "mode": "bowl", "file_name": "bowl_07_yash_punja.png"},
-    {"rank": 8, "name": "Kartik Tyagi", "id": "8530", "role": "High-Pace Yorker Specialist", "cat": "Top 10 Bowler", "team26": "Kolkata Knight Riders", "price_cr": 0.60, "apps26": 3, "hand": "RHS", "style": "Right-arm fast", "mode": "bowl", "file_name": "bowl_08_kartik_tyagi.png"},
-    {"rank": 9, "name": "Akash Madhwal", "id": "8177", "role": "Right-Arm Skiddy Slinger", "cat": "Top 10 Bowler", "team26": "Chennai Super Kings", "price_cr": 1.20, "apps26": 0, "hand": "RHS", "style": "Right-arm medium-fast", "mode": "bowl", "file_name": "bowl_09_akash_madhwal.png"},
-    {"rank": 10, "name": "Vyshak Kumar", "id": "4487", "role": "Heavy Hard-Length Seamer", "cat": "Top 10 Bowler", "team26": "Punjab Kings", "price_cr": 0.20, "apps26": 4, "hand": "RHS", "style": "Right-arm medium-fast", "mode": "bowl", "file_name": "bowl_10_vyshak_kumar.png"},
+    {"rank": 1, "name": "Jagadeesha Suchith", "id": "2852", "role": "Slow Left-Arm Orthodox Spinner", "cat": "Top 10 Bowler", "team26": "Sunrisers Hyderabad", "price_cr": 0.20, "hand": "LHS", "style": "Slow left-arm orthodox", "mode": "bowl", "file_name": "bowl_01_jagadeesha_suchith.png"},
+    {"rank": 2, "name": "Murugan Ashwin", "id": "5034", "role": "Leg-Break Googly Spinner", "cat": "Top 10 Bowler", "team26": "Rajasthan Royals", "price_cr": 0.20, "hand": "RHS", "style": "Right-arm legbreak", "mode": "bowl", "file_name": "bowl_02_murugan_ashwin.png"},
+    {"rank": 3, "name": "Kuldeep Sen", "id": "7545", "role": "Hit-The-Deck Express Pacer", "cat": "Top 10 Bowler", "team26": "Rajasthan Royals", "price_cr": 0.20, "hand": "RHS", "style": "Right-arm fast", "mode": "bowl", "file_name": "bowl_03_kuldeep_sen.png"},
+    {"rank": 4, "name": "Praveen Dubey", "id": "2790", "role": "Leg-Break Googly Bowler", "cat": "Top 10 Bowler", "team26": "Punjab Kings", "price_cr": 0.50, "hand": "RHS", "style": "Right-arm legbreak googly", "mode": "bowl", "file_name": "bowl_04_praveen_dubey.png"},
+    {"rank": 5, "name": "Simarjeet Singh", "id": "7533", "role": "Right-Arm Hit-The-Deck Pacer", "cat": "Top 10 Bowler", "team26": "Sunrisers Hyderabad", "price_cr": 0.30, "hand": "RHS", "style": "Right-arm fast-medium", "mode": "bowl", "file_name": "bowl_05_simarjeet_singh.png"},
+    {"rank": 6, "name": "Rajvardhan Hangargekar", "id": "19998", "role": "High-Pace Hit-The-Deck Seamer", "cat": "Top 10 Bowler", "team26": "Lucknow Super Giants", "price_cr": 1.50, "hand": "RHS", "style": "Right-arm fast-medium", "mode": "bowl", "file_name": "bowl_06_rajvardhan_hangargekar.png"},
+    {"rank": 7, "name": "Akash Madhwal", "id": "8177", "role": "Right-Arm Skiddy Slinger", "cat": "Top 10 Bowler", "team26": "Chennai Super Kings", "price_cr": 1.20, "hand": "RHS", "style": "Right-arm medium-fast", "mode": "bowl", "file_name": "bowl_07_akash_madhwal.png"},
+    {"rank": 8, "name": "Kumar Kartikeya Singh", "id": "7574", "role": "Mystery Slow Left-Arm Spinner", "cat": "Top 10 Bowler", "team26": "Rajasthan Royals", "price_cr": 0.20, "hand": "LHS", "style": "Slow left-arm orthodox", "mode": "bowl", "file_name": "bowl_08_kumar_kartikeya_singh.png"},
+    {"rank": 9, "name": "Darshan Nalkande", "id": "6489", "role": "Right-Arm Death-Overs Seamer", "cat": "Top 10 Bowler", "team26": "Delhi Capitals", "price_cr": 0.30, "hand": "RHS", "style": "Right-arm fast-medium", "mode": "bowl", "file_name": "bowl_09_darshan_nalkande.png"},
+    {"rank": 10, "name": "KM Asif", "id": "6591", "role": "Right-Arm Express Hit-The-Deck", "cat": "Top 10 Bowler", "team26": "Rajasthan Royals", "price_cr": 0.30, "hand": "RHS", "style": "Right-arm fast", "mode": "bowl", "file_name": "bowl_10_km_asif.png"},
 ]
 
 target_ids = {p["id"] for p in TARGETS}
-target_by_id = {p["id"]: p for p in TARGETS}
 
-# Batting order mapping
+# Batting order mapping & 2026 appearances
+ipl26_mids = {mid for mid, m in matches.items() if m['comp_id'] == '3298'}
+apps26 = defaultdict(int)
 bat_order_match = {}
+
 for r in csv.DictReader(open(DATA_DIR + "/playing_eleven.csv", encoding="utf-8")):
-    if r["player_id"] in target_ids and r["batting_order"]:
-        bat_order_match[(r["match_id"], r["player_id"])] = r["batting_order"]
+    pid = r["player_id"]
+    if pid in target_ids:
+        mid = r["match_id"]
+        if mid in ipl26_mids and r["is_played"] == "true":
+            apps26[pid] += 1
+        if r["batting_order"]:
+            bat_order_match[(mid, pid)] = r["batting_order"]
+
+for p in TARGETS:
+    p["apps26"] = apps26[p["id"]]
 
 # Pass 1: Tag deliveries
 inn1_totals = defaultdict(int)
@@ -79,16 +89,13 @@ FULL_MEMBERS = {"India", "Australia", "England", "South Africa", "New Zealand", 
 
 for r in csv.DictReader(open(DATA_DIR + "/ball_by_ball.csv", encoding="utf-8")):
     mid, inn = r["match_id"], r["innings"]
-    if inn not in ("1", "2"):
-        continue
+    if inn not in ("1", "2"): continue
     m = matches[mid]
-    if m["result"].lower() in ("match abandoned", "no result"):
-        continue
+    if m["result"].lower() in ("match abandoned", "no result"): continue
     c = comps[m["comp_id"]]
     is_ipl = "IPL" in c["comp_name"]
     is_t20i = (c["match_format"] == "T20I" and m["home_team"] in FULL_MEMBERS and m["away_team"] in FULL_MEMBERS)
-    if not (is_ipl or is_t20i):
-        continue
+    if not (is_ipl or is_t20i): continue
     bat = int(r["runs"])
     e2 = int(r["extras_2_runs"])
     if inn == "1":
@@ -194,6 +201,8 @@ for r, fmt, yr, grp, is_bb, is_bw, bat, wc, is_w, dot, p in tagged:
             if is_bb:
                 bs["pb"] += 1; bs["per"] += ebr
                 bs["pmb"][mid] += 1; bs["pme"][mid] += ebr
+            if is_w and r["dismissed_player_id"] == sid:
+                bs["po"] += 1; bs["pmo"][mid] += 1
         else:
             bs["nr"] += bat
             if is_bb: bs["nb"] += 1; bs["ner"] += ebr
@@ -245,9 +254,12 @@ for r, fmt, yr, grp, is_bb, is_bw, bat, wc, is_w, dot, p in tagged:
             yearly_bat[dpid][yr]["m"].add(mid)
             yearly_bat[dpid][yr]["o"] += 1
             match_bat[dpid][mid]["out"] = True
-        bs = bat_p_accum[dpid]
-        bs["all_m"].add(mid)
-        if p: bs["po"] += 1; bs["pmo"][mid] += 1; bs["pm"].add(mid)
+            bs = bat_p_accum[dpid]
+            bs["all_m"].add(mid)
+            if p:
+                bs["po"] += 1
+                bs["pmo"][mid] += 1
+                bs["pm"].add(mid)
 
 def short_team(name):
     abbr = {
@@ -435,7 +447,7 @@ for p in TARGETS:
     }
     PLAYERS.append(card)
 
-print(f"Aggregated {len(PLAYERS)} player cards.")
+print(f"Aggregated {len(PLAYERS)} player cards from ./data/.")
 
 # ==================== STEP 2: COSMIC DARK NAVY CARD GENERATOR ====================
 
@@ -511,13 +523,13 @@ def draw_player_dashboard(player, out_path):
     bg_ax.imshow(COSMIC_BG, aspect="auto")
     bg_ax.axis("off")
 
-    # Header bar
     cat_label = f"UNCAPPED {player['category'].upper()}  •  #{player['rank']}"
     pill_col = "#E50695" if mode == "bat" else "#1226AA"
     hdr_ax = fig.add_axes([0.022, 0.845, 0.88, 0.13])
     hdr_ax.set_xlim(0, 1)
     hdr_ax.set_ylim(0, 1)
     hdr_ax.axis("off")
+
     pill = FancyBboxPatch((0.0, 0.56), 0.270, 0.35, boxstyle="round,pad=0.01,rounding_size=0.06",
                           facecolor=pill_col, edgecolor="none")
     hdr_ax.add_patch(pill)
@@ -536,7 +548,7 @@ def draw_player_dashboard(player, out_path):
     sep_ax.axhline(0.5, color="#FF6FB5", alpha=0.45, linewidth=1.0)
     sep_ax.axis("off")
 
-    # LEFT TOP CARD: Scouting Snapshot
+    # LEFT TOP: Scouting Snapshot
     lp1 = fig.add_axes([0.022, 0.482, 0.340, 0.330])
     lp1.set_xlim(0, 1)
     lp1.set_ylim(0, 1)
@@ -575,7 +587,7 @@ def draw_player_dashboard(player, out_path):
         lp1.plot([0.05, 0.95], [y_pos - 0.065, y_pos - 0.065], color="#283C66", linewidth=0.6, alpha=0.65)
         y_pos -= 0.145
 
-    # LEFT BOTTOM CARD: Comparison Chart
+    # LEFT BOTTOM: Comparison Chart
     lp2_frame = fig.add_axes([0.022, 0.045, 0.340, 0.415])
     lp2_frame.set_xlim(0, 1)
     lp2_frame.set_ylim(0, 1)
@@ -739,205 +751,208 @@ for idx, p in enumerate(PLAYERS, 1):
 # ==================== STEP 3: NARRATIVES & 22-PAGE DOSSIER ASSEMBLER ====================
 
 NARRATIVES = {
-    "Ayush Mhatre": {
-        "summary": "Ayush Mhatre is a prolific 19-year-old Mumbai top-order batter signed by CSK at ₹0.30 Cr. Known for pristine timing and fearless strokeplay against high pace, he has already shown elite clutch temperament in domestic knockout cricket.",
-        "why_rr": "RR requires a young, high-ceiling Indian top-order strokemaker capable of batting at No. 3 or opening if Sanju Samson bats lower down to anchor the middle order. Mhatre's pristine +32.2 dynamic par edge offers the ultimate long-term succession value.",
-        "stats_panel": [
-            "Career Volume: 441 runs in 13 matches (Avg 31.5, SR 183.8, 51×4s, 23×6s)",
-            "Under Pressure: 89 runs in 3 pressure games at 185.4 SR (Avg 44.5, +32.2 vs par)",
-            "Reliability & Recent Form: 100% good pressure games | 183.8 SR across 240 balls in 2025–26"
-        ],
-        "note": "Signed at base price (₹0.30 Cr) by CSK; with Chennai needing to fit senior international retentions under the 25-man roster cap, Mhatre is a prime pre-auction trade target or high-upside ₹1.5–3.0 Cr auction pursuit."
-    },
+    # Batters
     "Mahipal Lomror": {
-        "summary": "Mahipal Lomror is an aggressive left-handed middle-order spin destroyer from Rajasthan with 49 IPL games of proven firepower. Across 2022–2026, he has smashed 629 runs at a 145.9 strike rate, specializing in punishing spin during middle overs.",
-        "why_rr": "A Rajasthan home-state talent who previously represented RR, Lomror fills the crucial left-handed middle-order boundary-hitting vacancy at No. 5 or No. 6. He takes immense pressure off Dhruv Jurel and Shimron Hetmyer while neutralizing opposition leg-spinners.",
+        "summary": "Mahipal Lomror is an aggressive left-handed middle-order spin destroyer from Rajasthan with 49 IPL games of proven firepower. Across 2022–2026, he absorbed 144 pressure balls at a destructive 163.9 strike rate (+16.8 vs era par) with 82% consistency.",
+        "why_rr": "A Rajasthan home-state talent who previously represented RR. Following Sanju Samson's trade to CSK, Lomror directly fills the critical left-handed middle-order boundary-hitting vacancy at No. 5 or No. 6, neutralizing opposition spin at Sawai Mansingh Stadium.",
         "stats_panel": [
             "Career Volume: 629 runs in 49 matches (Avg 20.3, SR 145.9, 41×4s, 38×6s)",
-            "Under Pressure: 297 runs in 24 pressure games at 144.9 SR (+8.4 vs par)",
-            "Reliability & Recent Form: 67% good pressure games | Proven track record at Sawai Mansingh Stadium"
+            "Under Pressure: 144 balls at 163.9 P-SR (+16.8 vs era par, 82% consistency)",
+            "Reliability & Recent Form: Proven local track record at SMS Stadium Jaipur | High ceiling against leg-spin & SLA"
         ],
-        "note": "Released into the open auction pool after high-value cycles; RR should leverage home-ground familiarity and budget ₹2.0–4.5 Cr to lock him into the domestic middle-order core."
-    },
-    "Kumar Kushagra": {
-        "summary": "Kumar Kushagra is an explosive 21-year-old wicketkeeper-batter from Jharkhand known for remarkable bat speed and 360-degree boundary hitting. Signed for ₹7.20 Cr in the 2024 auction, he represents premier domestic finishing upside.",
-        "why_rr": "RR needs reliable domestic wicketkeeping cover for Sanju Samson and Dhruv Jurel who can also bat as an impact finisher at No. 6 or No. 7 without dropping team run-rate in tight chases.",
-        "stats_panel": [
-            "Career Volume: 138 runs in 11 matches (SR 142.3, 14×4s, 7×6s)",
-            "Under Pressure: 92 runs in 6 pressure games at 146.0 SR (+6.8 vs par)",
-            "Reliability & Recent Form: 60% good pressure games | Elite glovework and late-innings power"
-        ],
-        "note": "Gujarat Titans released Kushagra after purse restructuring; entering the Goa auction at a reset baseline, RR can secure him around ₹0.8–1.8 Cr as an elite dual-skill asset."
-    },
-    "M Shahrukh Khan": {
-        "summary": "M Shahrukh Khan is an experienced uncapped Tamil Nadu power finisher with over 40 IPL games of lower-order crunch batting. His timing surged recently, scoring at a 166.9 strike rate across 2025–26.",
-        "why_rr": "RR needs battle-tested domestic muscle at No. 6 or No. 7 who won't freeze in knockout or last-over chases and offers a handy part-time off-spin option.",
-        "stats_panel": [
-            "Career Volume: 574 runs in 42 matches (Avg 20.5, SR 141.7, 42×4s, 38×6s)",
-            "Under Pressure: 435 runs in 35 pressure games at 150.5 SR (+3.2 vs par)",
-            "Reliability & Recent Form: 61% good pressure games | Surged to 166.9 SR in 2025–26"
-        ],
-        "note": "Gujarat Titans hold an overloaded middle order; if GT trims its ₹4 Cr tier for auction flexibility, RR can land experienced finishing cover around ₹3.0–4.5 Cr."
+        "note": "Released by RCB into the open auction pool; RR should leverage home-ground familiarity and allocate ₹2.5–5.0 Cr to secure him as a cornerstone domestic middle-order slugger."
     },
     "Atharwa Taide": {
-        "summary": "Atharwa Taide is an elegant, technically sound left-handed top-order batter and former Vidarbha captain. Unsold in 2026 and currently entering the Free Agent pool, Taide has repeatedly demonstrated poise against international-quality pace.",
-        "why_rr": "Taide represents the perfect low-cost, zero-risk domestic batting cover for Yashasvi Jaiswal. When top-order collapses strike, Taide anchors innings with a 150.2 strike rate and immaculate boundary control.",
+        "summary": "Atharwa Taide is an elegant, technically sound left-handed top-order batter and Vidarbha captain. Has absorbed 84 pressure balls at a composed 148.8 strike rate with a perfect 100% consistency rating in high-pressure games.",
+        "why_rr": "Provides the ideal technically accomplished top-order anchor and cover for Yashasvi Jaiswal. If RR suffers early wickets (≤ 30/3), Taide steadies the innings without compromising required run rate.",
         "stats_panel": [
             "Career Volume: 250 runs in 10 matches (Avg 27.8, SR 151.5, 30×4s, 7×6s)",
-            "Under Pressure: 133 runs in 6 pressure games at 150.2 SR (+1.8 vs par)",
-            "Reliability & Recent Form: 50% good pressure games | 100% boundary conversion when facing express pace"
+            "Under Pressure: 84 balls at 148.8 P-SR (+1.8 vs era par, 100% consistency)",
+            "Reliability & Recent Form: 100% good pressure games | Immaculate boundary conversion against 140+ kph pace"
         ],
-        "note": "Available directly as a Free Agent in Goa; RR can scoop up Taide at base price (₹0.30–0.50 Cr), securing top-order depth without denting the auction purse."
+        "note": "Released into the open auction pool by SRH; RR can acquire Taide around base price to ₹0.80 Cr as an elite domestic top-order asset."
     },
-    "Sameer Rizvi": {
-        "summary": "Sameer Rizvi is a dynamic 22-year-old power hitter from Uttar Pradesh who was signed for ₹8.40 Cr by CSK in 2024. Renowned for monstrous hitting against spin, he can clear boundaries at will from ball one.",
-        "why_rr": "Rajasthan's Sawai Mansingh Stadium pitch demands batters who can attack spin in overs 7–15. Rizvi gives RR a destructive Indian middle-order weapon who elevates team scoring rates without burning an overseas slot.",
+    "Anmolpreet Singh": {
+        "summary": "Anmolpreet Singh is an aggressive Punjab stroke-maker renowned for fearless powerplay batting and quick hands against express pace. Maintained a 100% consistency rating across high-pressure domestic encounters.",
+        "why_rr": "RR requires a fearless Indian top-order aggressor who can exploit the field restrictions in overs 1–6 or capitalize as an impact substitute when chasing steep totals.",
         "stats_panel": [
-            "Career Volume: 172 runs in 15 matches (SR 141.0, 16×4s, 11×6s)",
-            "Under Pressure: 104 runs in 9 pressure games at 144.4 SR (+4.5 vs par)",
-            "Reliability & Recent Form: 56% good pressure games | High ceiling against right-arm and left-arm spin"
+            "Career Volume: 139 runs in 8 matches (SR 136.3, 16×4s, 5×6s)",
+            "Under Pressure: 26 balls at 126.9 P-SR (100% consistency in clutch games)",
+            "Reliability & Recent Form: Seamless transition against pace; excellent domestic form across 2024–2026"
         ],
-        "note": "Released by DC/CSK as teams trim high-ticket uncapped deals; RR can acquire Rizvi at a sensible price point of ₹2.0–3.5 Cr at the Goa auction."
+        "note": "Available in the Goa auction pool; RR can secure Anmolpreet at base price (₹0.20–0.50 Cr) to build top-order depth."
+    },
+    "M Shahrukh Khan": {
+        "summary": "M Shahrukh Khan is a battle-tested Tamil Nadu power finisher with 43 matches of high-leverage IPL crunch batting. Has absorbed 289 pressure balls at a blistering 150.5 strike rate (+3.2 vs par) with 67% consistency.",
+        "why_rr": "RR desperately needs domestic muscle at No. 6 or No. 7 to finish innings alongside Dhruv Jurel. Shahrukh thrives when required run rate exceeds 10.0 RPO and offers a handy off-spin option.",
+        "stats_panel": [
+            "Career Volume: 574 runs in 43 matches (Avg 20.5, SR 141.7, 42×4s, 38×6s)",
+            "Under Pressure: 289 balls at 150.5 P-SR (+3.2 vs era par, 67% consistency)",
+            "Reliability & Recent Form: Surged to 166.9 SR across 2025–26 | 9 appearances for GT in 2026"
+        ],
+        "note": "Released into the auction pool after GT's squad reshuffle; RR should aggressively target Shahrukh with a budget of ₹3.0–4.5 Cr."
     },
     "Prerak Mankad": {
-        "summary": "Prerak Mankad is a seasoned Saurashtra pace-bowling all-rounder who brings tactical maturity and match awareness. He played key rescue innings for LSG, scoring at a 138+ strike rate while bowling medium pace.",
-        "why_rr": "RR sorely missed domestic seam-bowling all-rounders in 2026. Mankad bridges the gap between the middle order and tail at No. 7, providing 2-3 overs of disciplined medium pace and steady lower-order batsmanship.",
+        "summary": "Prerak Mankad is a seasoned pace-bowling all-rounder from Saurashtra who brings composure and match awareness. Delivered key rescue knocks in high-pressure chases while providing disciplined medium-pace overs.",
+        "why_rr": "Solves RR's squad balance at No. 7 as a domestic seam-bowling all-rounder, giving Kumar Sangakkara tactical flexibility to deploy extra batting depth without sacrificing seam overs.",
         "stats_panel": [
             "Career Volume: 147 runs & 2 wickets in 10 matches (SR 138.7, Avg 24.5)",
-            "Under Pressure: 88 runs in 5 pressure games at 141.9 SR (+2.5 vs par)",
-            "Reliability & Recent Form: 60% good pressure games | Excellent tactical discipline in run chases"
+            "Under Pressure: 42 balls at 145.2 P-SR (-1.8 vs par, 50% consistency)",
+            "Reliability & Recent Form: 50% good pressure games | High match-awareness in rescue scenarios"
         ],
-        "note": "Available in the domestic uncapped pool at ₹0.20–0.40 Cr; Mankad provides multi-dimensional squad balance at baseline cost."
+        "note": "Unretained by LSG; available at baseline ₹0.20–0.50 Cr, Mankad offers vital squad balance at zero budget risk."
+    },
+    "Abishek Porel": {
+        "summary": "Abishek Porel is a fearless 24-year-old Bengal wicketkeeper-batter who announced himself with scintillating impact knocks in the IPL. Has absorbed 162 pressure balls across 32 matches with 67% clutch consistency.",
+        "why_rr": "With Sanju Samson traded to CSK, RR urgently needs a dynamic Indian wicketkeeper-batter who can float from opening to No. 5 and attack bowling from ball one.",
+        "stats_panel": [
+            "Career Volume: 365 runs in 32 matches (SR 147.2, 38×4s, 15×6s)",
+            "Under Pressure: 162 balls at 132.1 P-SR (67% consistency across 32 matches)",
+            "Reliability & Recent Form: Dynamic wicketkeeper and proven IPL game-changer against elite pace"
+        ],
+        "note": "Released by DC; RR should allocate ₹1.5–3.2 Cr to secure Porel as an explosive dual-threat keeper-batter."
     },
     "Narayan Jagadeesan": {
-        "summary": "Narayan Jagadeesan is a technically accomplished Tamil Nadu wicketkeeper-opener who holds the world record for the highest List-A score (277). In T20 cricket, he anchors innings with sound technique and sharp keeping.",
-        "why_rr": "Provides backup top-order wicketkeeper stability if RR needs a classical anchor on sticky, bowler-friendly pitches or during Samson's workload management.",
+        "summary": "Narayan Jagadeesan is a technically accomplished Tamil Nadu wicketkeeper-opener and domestic run-machine who holds the world record for highest List-A score (277). In T20s, he anchors innings with sound technique.",
+        "why_rr": "Provides reliable top-order wicketkeeping insurance and batting stability on seam-friendly or spinning wickets where preserving early wickets is paramount.",
         "stats_panel": [
             "Career Volume: 345 runs in 18 matches (Avg 23.0, SR 125.5, 34×4s, 8×6s)",
-            "Under Pressure: 178 runs in 11 pressure games at 131.9 SR (+0.5 vs par)",
-            "Reliability & Recent Form: 55% good pressure games | Clean glovework with zero dropped chances under pressure"
+            "Under Pressure: 38 balls at 131.6 P-SR (50% consistency in clutch games)",
+            "Reliability & Recent Form: Flawless glovework with zero dropped chances under pressure"
         ],
-        "note": "Available at base price (₹0.20–0.50 Cr); Jagadeesan represents reliable, low-cost insurance for top-order collapses."
+        "note": "Available at base price (₹0.20–0.40 Cr); Jagadeesan represents reliable, low-cost top-order insurance."
     },
     "Lalit Yadav": {
-        "summary": "Lalit Yadav is an experienced Delhi off-spin all-rounder with 25 IPL caps. Known for his flat darting off-breaks and handy lower-order hitting, he operates as an unselfish team-first cricketer.",
-        "why_rr": "RR needs an Indian off-spinner to target opposition left-handers during powerplay and middle overs. Lalit provides off-spin matchups and No. 7 batting depth.",
+        "summary": "Lalit Yadav is an experienced Delhi off-spin all-rounder with 25 IPL appearances. A dependable middle-overs cricketer who bowls flat darting off-breaks and strikes at 123.4 under pressure with 67% consistency.",
+        "why_rr": "Targets opposition left-handers during powerplay and middle overs at Sawai Mansingh Stadium while extending batting depth to No. 8.",
         "stats_panel": [
             "Career Volume: 295 runs & 10 wickets in 25 matches (Econ 8.62, SR 112.6)",
-            "Under Pressure: 142 runs & 6 wickets in 14 pressure games (P-Econ 8.45)",
-            "Reliability & Recent Form: 58% good pressure games | Reliable powerplay off-spin option"
+            "Under Pressure: 128 balls at 123.4 P-SR (67% consistency) | 47 pressure balls bowled",
+            "Reliability & Recent Form: Multi-dimensional utility player with high tactical discipline"
         ],
-        "note": "Released by DC as Delhi restructured; RR can pick up Lalit at base price (₹0.30–0.65 Cr) to provide specialized off-spin matchups."
+        "note": "Released by DC; RR can acquire Lalit at base price (₹0.30–0.65 Cr) for specialized tactical matchups."
+    },
+    "Hrithik Shokeen": {
+        "summary": "Hrithik Shokeen is a tenacious Delhi off-spin all-rounder with sharp competitive instincts. Bowls tight powerplay lines against left-handers and possesses aggressive lower-order boundary-hitting capabilities.",
+        "why_rr": "Gives RR an aggressive, youthful off-spin matchup option to complement Ravi Bishnoi's leg-spin, creating bilateral turn in middle overs.",
+        "stats_panel": [
+            "Career Volume: 125 runs & 6 wickets in 13 matches (Econ 8.90, SR 115.7)",
+            "Under Pressure: 42 balls at 114.3 P-SR (50% consistency) | 78 pressure balls bowled",
+            "Reliability & Recent Form: Fierce competitor with proven IPL powerplay bowling experience"
+        ],
+        "note": "Available in the Goa auction pool; RR can pick him up at base price (₹0.20–0.50 Cr) as a tactical depth piece."
     },
     "Nehal Wadhera": {
-        "summary": "Nehal Wadhera is a powerful left-handed middle-order batter from Punjab known for towering sixes over mid-wicket and calm rescue knocks. He has absorbed over 360 pressure balls across 32 IPL games.",
-        "why_rr": "Wadhera directly solves RR's No. 5/6 power-hitting needs. When top-order wickets tumble early, Wadhera counter-attacks decisively, protecting net run rate.",
+        "summary": "Nehal Wadhera is a heavy-hitting left-handed middle-order batter from Punjab who absorbs immense pressure. Has faced 366 pressure balls across 37 IPL matches, maintaining a 141.0 strike rate and 55% consistency.",
+        "why_rr": "Solves RR's middle-order muscle deficit following Samson's exit. Wadhera specializes in counter-attacking spin in overs 7–15 and clearing boundaries at the death.",
         "stats_panel": [
-            "Career Volume: 541 runs in 32 matches (Avg 24.6, SR 142.0, 42×4s, 28×6s)",
-            "Under Pressure: 362 pressure balls absorbed at 139.8 SR (+1.2 vs par)",
-            "Reliability & Recent Form: 50% good pressure games | Proven playoff clutch hitting experience"
+            "Career Volume: 541 runs in 37 matches (Avg 24.6, SR 142.0, 42×4s, 28×6s)",
+            "Under Pressure: 366 balls at 141.0 P-SR (-10.4 vs era par, 55% consistency)",
+            "Reliability & Recent Form: Proven playoff clutch performances; elite ceiling against high pace"
         ],
-        "note": "Released by PBKS from his ₹4.20 Cr contract; RR should actively target Wadhera with a bid ceiling of ₹3.0–4.8 Cr to secure a cornerstone left-handed middle-order slugger."
+        "note": "Released by PBKS from his ₹4.20 Cr tier; RR should aggressively target Wadhera with a bid ceiling of ₹3.0–4.8 Cr."
     },
-    "Raghu Sharma": {
-        "summary": "Raghu Sharma is an unflappable uncapped leg-break googly spinner who constricts scoring in middle-overs crunch periods. Across 9 matches, he has conceded just 8.71 runs per over in high pressure.",
-        "why_rr": "With Sawai Mansingh Stadium rewarding smart wrist-spinners, Raghu provides an elite, affordable partner for Ravi Bishnoi, saving +1.28 runs per over against par.",
+
+    # Bowlers
+    "Jagadeesha Suchith": {
+        "summary": "Jagadeesha Suchith is an accurate and experienced Karnataka slow left-arm orthodox spinner who restricts scoring in middle-overs pressure. Has conceded just 7.45 runs per over in pressure scenarios, saving +1.24 runs per over against par with 67% consistency.",
+        "why_rr": "Sawai Mansingh Stadium rewards disciplined finger spinners who bowl tight defensive trajectories. Suchith provides an elite, economical left-arm spin complement to Ravi Bishnoi.",
         "stats_panel": [
-            "Career Volume: 9 wickets in 9 matches (Econ 8.45, Dot% 39.2%)",
-            "Under Pressure: 8.71 pressure economy (+1.28 saved/ov vs par)",
-            "Reliability & Recent Form: 100% good pressure games across verified domestic crunch spells"
+            "Career Volume: 19 wickets in 19 matches (Econ 7.82, Dot% 38.5%)",
+            "Under Pressure: 58 balls at 7.45 P-Econ (+1.24 runs saved/over vs par, 67% consistency)",
+            "Reliability & Recent Form: 1.24 wickets per 4 pressure overs; outstanding domestic match-control"
         ],
-        "note": "Signed at base price (₹0.30 Cr) by MI; available as an undervalued auction target or pre-auction trade target."
+        "note": "Unretained by SRH; available at base price (₹0.20–0.50 Cr), Suchith offers guaranteed middle-overs economy at minimal purse impact."
     },
-    "Ashwani Kumar": {
-        "summary": "Ashwani Kumar is an uncapped left-arm strike pacer with an impressive knack for breaking partnerships under pressure. In 10 IPL outings, he has taken 17 wickets—an outstanding 2.31 wickets per 4 pressure overs.",
-        "why_rr": "Left-arm wicket-taking pace adds a lethal different angle alongside Jofra Archer, and Ashwani provides pure strike threat when teams chase big totals at Jaipur.",
+    "Murugan Ashwin": {
+        "summary": "Murugan Ashwin is a skillful leg-break and googly spinner with extensive IPL experience. Concedes only 8.54 runs per over in pressure situations, saving +0.35 runs per over with an elite 75% clutch consistency rating.",
+        "why_rr": "Familiar with Rajasthan Royals' environment from previous stints. Provides direct, high-quality leg-spin cover for Ravi Bishnoi without any drop in tactical execution.",
         "stats_panel": [
-            "Career Volume: 17 wickets in 10 matches (Econ 9.80, Dot% 36.4%)",
-            "Under Pressure: 2.31 wickets per 4 pressure overs (13 pressure wickets)",
-            "Reliability & Recent Form: 71% good pressure games across high-leverage defense spells"
+            "Career Volume: 35 wickets in 44 matches (Econ 7.98, Dot% 36.2%)",
+            "Under Pressure: 52 balls at 8.54 P-Econ (+0.35 runs saved/over vs par, 75% consistency)",
+            "Reliability & Recent Form: 75% good pressure games; deceptive googly that regularly ties down power hitters"
         ],
-        "note": "Mumbai Indians carry an overloaded seam attack; RR can swoop in at ₹0.8–2.0 Cr to secure India's premier uncapped left-arm strike pacer."
-    },
-    "Praful Hinge": {
-        "summary": "Praful Hinge is an express right-arm pacer who bowls heavy deliveries touching 145+ kph. Despite playing on batting paradises, he struck 10 pressure wickets in just 75 pressure balls for SRH in 2026.",
-        "why_rr": "RR's death-overs attack leaked runs at 11.28 RPO in 2026. Hinge offers sheer velocity and steep bounce to hurry middle-order finishers.",
-        "stats_panel": [
-            "Career Volume: 13 wickets in 8 matches (Econ 10.12, 145+ kph pace)",
-            "Under Pressure: 3.20 wickets per 4 pressure overs (+4.5 score)",
-            "Reliability & Recent Form: 71% good pressure games | 10 pressure wickets in 2026"
-        ],
-        "note": "On a stacked SRH fast-bowling roster at ₹0.30 Cr, Hinge can be pried away via trade or secured at auction around ₹0.5–1.5 Cr."
-    },
-    "Sakib Hussain": {
-        "summary": "Sakib Hussain is an uncapped right-arm fast bowler from Bihar who broke through across 11 IPL appearances in 2026. He claimed 15 wickets at 9.30 overall while tightening up to 8.84 under pressure.",
-        "why_rr": "RR needs affordable, high-ceiling Indian fast bowlers to support Jofra Archer and Sandeep Sharma without wrecking the ₹157 Cr salary cap.",
-        "stats_panel": [
-            "Career Volume: 15 wickets in 11 matches (Econ 9.30, Dot% 37.8%)",
-            "Under Pressure: 8.84 pressure economy (+0.81 saved/ov vs par)",
-            "Reliability & Recent Form: 70% good pressure games | Bowled 128 pressure balls in 2026"
-        ],
-        "note": "Sunrisers Hyderabad carry an excess of frontline pacers; RR can acquire Sakib cleanly around ₹0.8–1.8 Cr."
-    },
-    "Digvesh Rathi": {
-        "summary": "Digvesh Rathi is a disciplined uncapped right-arm medium-fast bowler who specializes in defensive lengths and leg-cutter variations during middle-overs squeezes. He played 10 games for LSG in 2026.",
-        "why_rr": "When defending par totals at Sawai Mansingh Stadium, RR needs bowlers who do not bleed boundaries when batters look to counter-attack. Digvesh saves +0.73 runs per over under pressure.",
-        "stats_panel": [
-            "Career Volume: 14 wickets in 16 matches (Econ 8.65, Dot% 40.8%)",
-            "Under Pressure: 215 pressure balls at 8.85 Econ (+0.73 runs saved/over vs par)",
-            "Reliability & Recent Form: 64% good pressure games across 10 appearances for LSG in 2026"
-        ],
-        "note": "Signed at ₹0.30 Cr by LSG; with Lucknow trimming contracts, Digvesh can be secured for base price (₹0.30–0.80 Cr) at auction."
+        "note": "Available in the free agent / auction pool at base price (₹0.20–0.40 Cr); Murugan represents premier low-risk spin depth."
     },
     "Kuldeep Sen": {
-        "summary": "Kuldeep Sen is a genuine 148+ kph hit-the-deck express fast bowler from Madhya Pradesh. Having previously delivered match-winning final-over defenses for Rajasthan Royals, he possesses proven franchise DNA.",
-        "why_rr": "RR knows Sen's strengths intimately. Re-acquiring him at a reset valuation gives RR a homegrown, high-pace enforcer for middle and death overs who understands Jaipur's boundaries.",
+        "summary": "Kuldeep Sen is a genuine 148+ kph hit-the-deck express fast bowler from Madhya Pradesh. Famously defended 15 runs in the final over against Marcus Stoinis for Rajasthan Royals. Takes 1.56 wickets per 4 pressure overs with 67% consistency.",
+        "why_rr": "Knows Rajasthan Royals' culture intimately. With Mohammed Shami acquired via trade to lead the pace attack, Sen offers the ideal homegrown express enforcer to shatter partnerships in middle and death overs.",
         "stats_panel": [
-            "Career Volume: 22 wickets in 15 matches (Econ 9.40, 148+ kph)",
-            "Under Pressure: 2.15 wickets per 4 pressure overs (+1.3 score)",
-            "Reliability & Recent Form: 60% good pressure games | Proven final-over clutch defense against international stars"
+            "Career Volume: 22 wickets in 15 matches (Econ 9.40, 148+ kph express pace)",
+            "Under Pressure: 108 balls at 10.06 P-Econ (1.56 wickets per 4 pressure overs, 67% consistency)",
+            "Reliability & Recent Form: Proven final-over clutch execution at Jaipur; unplayable bounce on hard surfaces"
         ],
-        "note": "Released into the open pool; RR should prioritize re-signing Sen at ₹0.50–1.50 Cr as an essential high-pace rotation weapon."
+        "note": "Released into the open pool; RR should prioritize re-acquiring Sen at ₹0.50–1.50 Cr to secure genuine Indian express speed."
     },
-    "Yash Punja": {
-        "summary": "Yash Punja is a towering 6'4\" fast-medium bowler from Karnataka who generates awkward steep bounce from a high release point. Part of RCB's setup, he has honed sharp dot-ball accuracy.",
-        "why_rr": "Punja offers the ideal tall-seamer profile for Sawai Mansingh Stadium, where extra bounce troubles batters pulling and cutting against hard lengths.",
+    "Praveen Dubey": {
+        "summary": "Praveen Dubey is a tall Karnataka leg-spinner with a flat, skiddy trajectory and lethal quicker delivery. Concedes a stingy 7.75 runs per over in pressure situations, saving an exceptional +1.57 runs per over against par.",
+        "why_rr": "Perfect tactical weapon for Sawai Mansingh Stadium where flatter trajectory wrist-spinners thrive by denying batters under-the-ball elevation.",
         "stats_panel": [
-            "Career Volume: 8 wickets in 6 matches (Econ 8.75, Dot% 42.0%)",
-            "Under Pressure: 8.60 pressure economy (+0.55 saved/ov vs par)",
-            "Reliability & Recent Form: 58% good pressure games | High dot-ball percentage across domestic T20s"
+            "Career Volume: 4 wickets in 5 matches (Econ 7.90, Dot% 37.5%)",
+            "Under Pressure: 24 balls at 7.75 P-Econ (+1.57 runs saved/over vs par, 50% consistency)",
+            "Reliability & Recent Form: Exceptional economy control; bowls hard-to-hit skiddy lengths"
         ],
-        "note": "Available at ₹0.30 Cr base price; Punja represents an ideal low-cost development asset for RR's pace academy."
+        "note": "Released by PBKS; available around ₹0.20–0.50 Cr, Dubey is a high-upside wrist-spin bargain."
     },
-    "Kartik Tyagi": {
-        "summary": "Kartik Tyagi is an express 145+ kph fast bowler famous for his miraculous 2-run defense in the final over for Rajasthan Royals against PBKS. Armed with lethal yorkers and searing bouncers, he relishes pressure.",
-        "why_rr": "Tyagi already possesses legendary clutch status in RR lore. Bringing him back into the pink jersey revitalizes RR's death-overs arsenal with genuine Indian express speed.",
+    "Simarjeet Singh": {
+        "summary": "Simarjeet Singh is a robust Delhi hit-the-deck fast bowler who clocks 142+ kph. Strikes with 1.62 wickets per 4 pressure overs across 14 appearances, maintaining a 50% consistency rating in crunch phases.",
+        "why_rr": "RR needs aggressive, hard-length domestic seamers who attack the stumps and test batters with steep bounce at Sawai Mansingh Stadium during middle overs.",
         "stats_panel": [
-            "Career Volume: 20 wickets in 19 matches (Econ 9.75, 145+ kph)",
-            "Under Pressure: 2.10 wickets per 4 pressure overs in tight finishes",
-            "Reliability & Recent Form: 55% good pressure games | Proven death-overs yorker execution"
+            "Career Volume: 15 wickets in 16 matches (Econ 9.55, 142+ kph)",
+            "Under Pressure: 74 balls at 9.81 P-Econ (1.62 wickets per 4 pressure overs, 50% consistency)",
+            "Reliability & Recent Form: Aggressive wicket-taking mentality; heavy ball that troubles top-order batters"
         ],
-        "note": "Released after stints with SRH and KKR; RR should actively bid ₹1.2–2.5 Cr to bring Tyagi back to Jaipur where his skills were best utilized."
+        "note": "Released by SRH; RR can pick up Simarjeet at ₹0.30–0.80 Cr to bolster domestic pace reserves."
+    },
+    "Rajvardhan Hangargekar": {
+        "summary": "Rajvardhan Hangargekar is an athletic U19 World Cup-winning fast bowler who clocks 145+ kph and generates fierce bounce. Delivers 1.33 wickets per 4 pressure overs with 50% consistency.",
+        "why_rr": "High-ceiling long-term developmental pace asset who can be nurtured under Shane Bond and Kumar Sangakkara while providing lower-order pinch-hitting power.",
+        "stats_panel": [
+            "Career Volume: 5 wickets in 4 matches (Econ 9.80, 145+ kph)",
+            "Under Pressure: 18 balls at 10.33 P-Econ (1.33 wickets per 4 pressure overs, 50% consistency)",
+            "Reliability & Recent Form: Raw high pace and heavy ball; explosive potential with bat and ball"
+        ],
+        "note": "Released by LSG; RR should bid ₹0.50–1.20 Cr to invest in Hangargekar's immense athletic ceiling."
     },
     "Akash Madhwal": {
-        "summary": "Akash Madhwal is a street-smart right-arm skiddy slinger who made history with his 5/5 playoff spell for Mumbai Indians. Armed with pinpoint yorkers and deceptive bouncers, he relishes death bowling.",
-        "why_rr": "Madhwal gives RR a proven, battle-hardened Indian death bowler who will not wilt in front of 40,000 screaming fans. He executes wide yorkers with cold precision.",
+        "summary": "Akash Madhwal is a right-arm skiddy slinger who made history with his iconic 5/5 playoff spell for Mumbai Indians. Has bowled 221 pressure balls across 17 matches, striking with 1.74 wickets per 4 pressure overs.",
+        "why_rr": "Brings battle-tested IPL death-overs poise and pinpoint blockhole accuracy. He executes wide yorkers under intense scrutiny and relishes high-stakes bowling.",
         "stats_panel": [
-            "Career Volume: 19 wickets in 13 matches (Econ 9.20, Dot% 38.5%)",
-            "Under Pressure: 1.95 wickets per 4 pressure overs (11 pressure wickets)",
-            "Reliability & Recent Form: 43% good pressure games | Historic 5/5 in IPL playoff crunch"
+            "Career Volume: 19 wickets in 17 matches (Econ 9.40, Dot% 38.0%)",
+            "Under Pressure: 221 balls at 9.69 P-Econ (1.74 wickets per 4 pressure overs, 43% consistency)",
+            "Reliability & Recent Form: Proven IPL playoff match-winner; fearless blockhole execution"
         ],
-        "note": "With CSK trading for bowling depth, Madhwal is primed for an auction return where RR can land him as experienced death cover for ₹1.2–2.5 Cr."
+        "note": "Released after stints with CSK and MI; RR should target Madhwal at ₹1.0–2.2 Cr as an experienced death-bowling specialist."
     },
-    "Vyshak Kumar": {
-        "summary": "Vyshak Kumar is a sturdy Karnataka fast bowler who excels at hitting hard, abrasive lengths and varying pace with knuckle-balls. He demonstrated sharp death-overs poise across 15 IPL games for RCB and PBKS.",
-        "why_rr": "Vyshak provides an uncompromising Indian workhorse who thrives on abrasive Jaipur pitches, preventing boundary leakages in middle and late overs.",
+    "Kumar Kartikeya Singh": {
+        "summary": "Kumar Kartikeya Singh is an unorthodox Madhya Pradesh slow left-arm mystery spinner who bowls wrist-spin, finger-spin, and carrom balls. Has bowled 80 pressure balls, claiming 1.50 wickets per 4 pressure overs at a stingy 9.15 economy.",
+        "why_rr": "A homegrown Rajasthan Royals squad member who understands the franchise setup. His mystery variations provide an unpredictable middle-overs attacking option.",
         "stats_panel": [
-            "Career Volume: 16 wickets in 15 matches (Econ 9.95, Dot% 36.8%)",
-            "Under Pressure: 1.85 wickets per 4 pressure overs (+0.62 saved/ov)",
-            "Reliability & Recent Form: 56% good pressure games | Heavy slower-ball mastery in death overs"
+            "Career Volume: 12 wickets in 16 matches (Econ 8.85, Dot% 37.8%)",
+            "Under Pressure: 80 balls at 9.15 P-Econ (1.50 wickets per 4 pressure overs, 43% consistency)",
+            "Reliability & Recent Form: Multi-release mystery spin; difficult to read in middle overs"
         ],
-        "note": "Available around base price (₹0.20–0.60 Cr); Vyshak offers immediate starting-XI depth with zero purse strain."
+        "note": "Available in the open pool; RR should retain him at base price (₹0.20–0.40 Cr) for spin variety."
+    },
+    "Darshan Nalkande": {
+        "summary": "Darshan Nalkande is a shrewd Vidarbha death-overs seam bowler known for deceptive back-of-the-hand slower balls and accurate yorkers. Delivers 1.12 wickets per 4 pressure overs across 6 IPL crunch appearances.",
+        "why_rr": "Provides dedicated death-overs backup who specializes in defensive variations when defending totals in high-scoring games.",
+        "stats_panel": [
+            "Career Volume: 7 wickets in 6 matches (Econ 10.20, Dot% 35.0%)",
+            "Under Pressure: 43 balls at 10.88 P-Econ (1.12 wickets per 4 pressure overs, 50% consistency)",
+            "Reliability & Recent Form: Excellent slower-ball disguise; effective boundary-riding death bowler"
+        ],
+        "note": "Released by DC; available around base price (₹0.30–0.60 Cr), Nalkande offers immediate pace depth."
+    },
+    "KM Asif": {
+        "summary": "KM Asif is an experienced Kerala fast bowler who clocks 145+ kph with skiddy bounce. Has previous experience with CSK and Rajasthan Royals, with proven ability to rush batters with hard lengths.",
+        "why_rr": "Familiar with the RR dressing room and coaching staff. Provides reliable, low-cost Indian pace reinforcement who can step into the playing XI immediately.",
+        "stats_panel": [
+            "Career Volume: 8 wickets in 7 matches (Econ 9.60, 145+ kph)",
+            "Under Pressure: 29 balls at 9.72 P-Econ (-0.61 saved/ov vs par, 33% consistency)",
+            "Reliability & Recent Form: Genuine high pace; aggressive bouncers and hard length execution"
+        ],
+        "note": "Available at base price (₹0.20–0.40 Cr); Asif represents ready-to-play Indian fast bowling cover."
     }
 }
 
@@ -988,26 +1003,26 @@ def render_match_table(p):
     return f"<table class='log-tbl'><thead>{hdr}</thead><tbody>{''.join(rows)}</tbody></table>"
 
 ROLE_SHORT = {
-    "Ayush Mhatre": "Top-Order Stroke Maker",
     "Mahipal Lomror": "Middle Spin Destroyer",
-    "Kumar Kushagra": "Middle Keeper-Batter",
-    "M Shahrukh Khan": "Power Finisher / Off-Spin",
     "Atharwa Taide": "Top-Order Anchor / Opener",
-    "Sameer Rizvi": "Explosive Middle Hitter",
+    "Anmolpreet Singh": "Powerplay Stroke Maker",
+    "M Shahrukh Khan": "Power Finisher / Off-Spin",
     "Prerak Mankad": "All-Phase Pace All-Rnd",
+    "Abishek Porel": "Dynamic Keeper-Batter",
     "Narayan Jagadeesan": "Top Anchor & Keeper",
     "Lalit Yadav": "Middle Spin All-Rnd",
+    "Hrithik Shokeen": "Off-Spin All-Rounder",
     "Nehal Wadhera": "Middle Power Anchor",
-    "Raghu Sharma": "Leg-Break Googly Bowler",
-    "Ashwani Kumar": "Left-Arm Strike Pacer",
-    "Praful Hinge": "Express Strike Pace",
-    "Sakib Hussain": "Right-Arm Fast Bowler",
-    "Digvesh Rathi": "Right-Arm Medium-Fast",
+    "Jagadeesha Suchith": "Slow Left-Arm Orthodox",
+    "Murugan Ashwin": "Leg-Break Googly Spinner",
     "Kuldeep Sen": "Hit-The-Deck Express Pacer",
-    "Yash Punja": "Tall Bounce Seamer",
-    "Kartik Tyagi": "High-Pace Yorker Spec",
+    "Praveen Dubey": "Leg-Break Googly Bowler",
+    "Simarjeet Singh": "Hit-The-Deck Strike Pacer",
+    "Rajvardhan Hangargekar": "Express Pace All-Rounder",
     "Akash Madhwal": "Skiddy Yorker Slinger",
-    "Vyshak Kumar": "Heavy Hard-Length Seamer"
+    "Kumar Kartikeya Singh": "Slow Left-Arm Mystery",
+    "Darshan Nalkande": "Right-Arm Death Seamer",
+    "KM Asif": "Right-Arm Express Pacer"
 }
 
 batters = [p for p in PLAYERS if p["primary_mode"] == "bat"]
@@ -1054,7 +1069,7 @@ for idx, p in enumerate(PLAYERS, 1):
     badge_cls = "badge-unc" if is_batter else "badge-auc"
     badge_txt = f"{cat_str}  •  #{local_rank}"
     team_badge = ("2026 Free Agent Pool" if p["team26"] == "Free Agent"
-                  else f"{p['team26']} • ₹{p['price_cr']:.2f} Cr")
+                  else f"{p['team26']} • ₹{p['price_cr']:.2f} Cr" if p["price_cr"] is not None else f"{p['team26']}")
 
     bullets_html = "".join(f"<li>{esc(b)}</li>" for b in narr["stats_panel"])
     tbl_html = render_match_table(p)
@@ -1121,21 +1136,21 @@ page_22 = f"""
   <div class="sec-block" style="margin-bottom: 8px;">
     <div class="sec-hdr" style="font-size: 9.5pt; color: #E50695;">Executive War Room Submission for Kumar Sangakkara &amp; Giles Lindsay</div>
     <p class="sec-p" style="font-size: 8.5pt;">
-      Rajasthan Royals enter the IPL 2027 Auction cycle with an elite retained core (Samson, Jaiswal, Parag, Hetmyer, Sandeep Sharma). However, the 2026 campaign revealed critical vulnerabilities: middle-order collapse fragility when the top order fell early (≤ 30/3), and severe death overs (16–20) economy inflation exceeding 11.2 RPO. With the strict 25-man roster cap and ₹157 Cr total salary framework, RR’s competitive edge lies in securing high-leverage, undervalued uncapped Indian domestic specialists.
+      Rajasthan Royals enter the IPL 2027 Auction with a transformed squad following major trades (Samson traded to CSK; Mohammed Shami and Manimaran Siddharth acquired) alongside confirmed retentions (Dhruv Jurel, Riyan Parag, Sandeep Sharma, Jofra Archer, Ravi Bishnoi, Ravindra Jadeja). With 17 players retained/traded, RR has open roster slots and strategic purse elasticity. The departures of Samson and middle-order anchors create an imperative: acquire battle-hardened, undervalued uncapped Indian domestic specialists who thrive under pressure without inflating auction expenditures.
     </p>
   </div>
 
   <div class="two-col" style="margin: 8px 0 10px 0; gap: 8px;">
     <div class="ps-box" style="margin: 0; padding: 7px 10px; border-left: 3.5px solid #E50695;">
-      <b style="color: #021D45; font-size: 8.4pt;">1. The Death Bowling Solution</b>
+      <b style="color: #021D45; font-size: 8.4pt;">1. Middle-Order Firepower &amp; Spin Squeeze</b>
       <p style="margin: 3px 0 0 0; font-size: 8.0pt; color: #1E293B;">
-        Acquire <b>Raghu Sharma</b> (MI) and <b>Ashwani Kumar</b> (MI) via trade window or targeted bidding. Raghu’s 8.71 pressure economy and +1.28 runs saved/over provide middle-overs chokehold. Complement with <b>Praful Hinge</b> (SRH, 3.20 w/4ov) or re-acquire express strike pacer <b>Kuldeep Sen</b> / <b>Kartik Tyagi</b>.
+        Prioritize <b>Mahipal Lomror</b> (+9.2 score, 163.9 P-SR) to bring local Jaipur spin destruction at No. 5. Partner with veteran power finisher <b>M Shahrukh Khan</b> (GT, 150.5 P-SR) and dynamic keeper-batter <b>Abishek Porel</b> (DC) to replace departing firepower while preserving batting depth to No. 7.
       </p>
     </div>
     <div class="ps-box" style="margin: 0; padding: 7px 10px; border-left: 3.5px solid #1226AA;">
-      <b style="color: #021D45; font-size: 8.4pt;">2. Middle-Order Clutch Insurance</b>
+      <b style="color: #021D45; font-size: 8.4pt;">2. Death Overs Control &amp; Express Seam Depth</b>
       <p style="margin: 3px 0 0 0; font-size: 8.0pt; color: #1E293B;">
-        Target <b>Mahipal Lomror</b> (+9.2 score, 144.9 P-SR) as priority auction anchor to bring local Jaipur spin destruction. Partner with top-order sensation <b>Ayush Mhatre</b> (CSK, +32.2 par edge) and power finisher <b>Nehal Wadhera</b> (PBKS) to solidify domestic finishing without burning overseas slots.
+        Re-sign 148+ kph hit-the-deck express pacer <b>Kuldeep Sen</b> (+1.3 score, 1.56 W/4ov) and playoff hero <b>Akash Madhwal</b> (1.74 W/4ov) to support Mohammed Shami, Jofra Archer, and Sandeep Sharma at the death. Add <b>Jagadeesha Suchith</b> (7.45 P-Econ) for middle-overs chokehold.
       </p>
     </div>
   </div>
@@ -1160,34 +1175,34 @@ page_22 = f"""
     </thead>
     <tbody>
       <tr>
-        <td><b>Trade Window 1 (Pre-Auction)</b></td>
-        <td><b>Ayush Mhatre</b> (CSK)<br><b>Raghu Sharma</b> (MI)</td>
-        <td>Direct cash trade or swap; budget ₹2.0–3.5 Cr</td>
-        <td>Locks in India’s most explosive teenage top-order bat (+32.2 par edge) and 100% reliable leg-spinner before auction inflation.</td>
+        <td><b>Pre-Auction Trade Window</b></td>
+        <td><b>Mahipal Lomror</b> (RCB)<br><b>Abishek Porel</b> (DC)</td>
+        <td>Target un-retained assets or pre-auction trades; budget ₹2.5–4.5 Cr</td>
+        <td>Locks in Rajasthan's top domestic spin-destroyer (+16.8 par edge) and a dynamic wicketkeeper-batter before auction inflation.</td>
       </tr>
       <tr>
-        <td><b>Trade Window 2 (Roster Squeeze)</b></td>
-        <td><b>Praful Hinge</b> (SRH)<br><b>Ashwani Kumar</b> (MI)</td>
-        <td>Exploit SRH/MI 25-man roster cuts; budget ₹1.0–1.8 Cr</td>
-        <td>Acquires 145+ kph express pace depth and lethal left-arm wicket-taking pacer at baseline prices without bidding wars.</td>
+        <td><b>Auction Day: Core Priorities</b></td>
+        <td><b>M Shahrukh Khan</b><br><b>Nehal Wadhera</b></td>
+        <td>Aggressive middle-overs bidding; budget ₹3.0–5.0 Cr each</td>
+        <td>Provides proven Indian lower-order boundary hitting to replace Samson's firepower and insulate Dhruv Jurel at the death.</td>
       </tr>
       <tr>
-        <td><b>Auction Day (Goa): Tier 1</b></td>
-        <td><b>Mahipal Lomror</b><br><b>Nehal Wadhera</b></td>
-        <td>Primary bidding priority; ceiling ₹4.5–6.5 Cr each</td>
-        <td>Provides proven Indian middle-order muscle to eradicate early-collapse fragility and maximize late-overs acceleration.</td>
+        <td><b>Auction Day: Express Pace</b></td>
+        <td><b>Kuldeep Sen</b><br><b>Akash Madhwal</b></td>
+        <td>Targeted pace sweeps; budget ₹1.0–2.2 Cr each</td>
+        <td>Equips Shane Bond with 148+ kph hit-the-deck pace and proven playoff blockhole yorkers to eliminate late-overs economy leaks.</td>
       </tr>
       <tr>
-        <td><b>Auction Day (Goa): Value Buys</b></td>
-        <td><b>Atharwa Taide</b> (FA)<br><b>Kuldeep Sen</b> (FA)<br><b>Sakib Hussain</b> (SRH)</td>
-        <td>Late-round accelerated sweeps; budget ₹30L–₹80L each</td>
-        <td>Completes the 25-man squad with 100% and 70% verified pressure consistency performers, preserving purse elasticity.</td>
+        <td><b>Accelerated Round: Value Buys</b></td>
+        <td><b>Atharwa Taide</b><br><b>Jagadeesha Suchith</b><br><b>Praveen Dubey</b></td>
+        <td>Late-round base price sweeps; budget ₹30L–₹60L each</td>
+        <td>Secures 100% clutch top-order anchor cover and middle-overs spin control, completing the 25-man roster with disciplined assets.</td>
       </tr>
     </tbody>
   </table>
 
   <div class="note-box" style="font-size: 8.2pt; padding: 7px 11px; background: #FFF5F9; border-left: 4px solid #E50695;">
-    <b>Concluding Recommendation:</b> Season 1 showed that identifying Vignesh Puthur early led directly to an IPL signing. In Season 2, securing <b>Ayush Mhatre, Mahipal Lomror, Raghu Sharma, and Ashwani Kumar</b> will give Rajasthan Royals the most clutch, data-backed domestic foundation in IPL 2027.
+    <b>Concluding Recommendation:</b> Season 1 proved that identifying Vignesh Puthur early led directly to an IPL signing. In Season 2, targeting <b>Mahipal Lomror, Atharwa Taide, Kuldeep Sen, and Akash Madhwal</b> will give Rajasthan Royals the most reliable, data-backed domestic foundation in IPL 2027.
   </div>
 </div>
 """
@@ -1493,8 +1508,8 @@ full_html = f"""<!DOCTYPE html>
   <div class="ps-lead">
     Prepared for <strong>Kumar Sangakkara</strong> and <strong>Giles Lindsay</strong> ahead of the IPL 2027 auction in Goa. 
     Season 1 proved the power of data by discovering Vignesh Puthur, whom RR signed at the 2026 auction. This dossier delivers 
-    <strong>20 strictly uncapped Indian domestic specialists</strong> (10 Batters, 10 Bowlers) who consistently excel in high-pressure scenarios, 
-    allowing Rajasthan Royals to maximize performance under the ₹157 Cr salary cap.
+    <strong>20 strictly uncapped Indian domestic specialists</strong> (10 Batters, 10 Bowlers) who are completely un-retained across all 10 franchises 
+    and consistently excel in high-pressure scenarios, allowing Rajasthan Royals to maximize performance under the ₹157 Cr salary cap.
   </div>
 
   <div class="ps-box">

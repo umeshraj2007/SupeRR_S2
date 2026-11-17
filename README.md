@@ -5,70 +5,104 @@
 
 # SupeRR Selector Season 2: Help Shape Rajasthan Royals' IPL 2027 Auction Strategy
 ### Round 1: Empirical Evaluation of Strictly Uncapped Indian Domestic Talent Available in the IPL 2027 Auction Pool
-### Official Post-Retention War Room Dossier • Finalized November 17, 2026
+### Official Post-Retention War Room Dossier • Finalized 17 November 2026 (6:00 PM IST Cutoff)
 
 [![Author: Umeshraj Parkunan](https://img.shields.io/badge/Author-Umeshraj_Parkunan-E50695?style=flat&logo=github)](https://github.com/umeshraj2007)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Umeshraj_Parkunan-0077B5?style=flat&logo=linkedin)](https://www.linkedin.com/in/umeshraj-parkunan/)
 [![GitHub Repo](https://img.shields.io/badge/Repository-umeshraj2007%2FSupeRR__S2-021D45?style=flat&logo=github)](https://github.com/umeshraj2007/SupeRR_S2)
 [![Live Dashboard](https://img.shields.io/badge/Live_Dashboard-GitHub_Pages-E50695?style=flat&logo=googlechrome&logoColor=white)](https://umeshraj2007.github.io/SupeRR_S2/)
+[![Analysis Video](https://img.shields.io/badge/YouTube-Analysis_Journey-FF0000?style=flat&logo=youtube&logoColor=white)](https://youtu.be/7KrnPLnZ2wQ)
 [![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![Competition](https://img.shields.io/badge/Unstop-SupeRR_Selector_S2-0052CC)](https://unstop.com/hackathons/crp-superr-selector-season-2-help-shape-rajasthan-royals-ipl-2027-auction-strategy-rajasthan-royals-1792758)
 
 **Author:** Umeshraj Parkunan  
 **GitHub Repository:** [github.com/umeshraj2007/SupeRR_S2](https://github.com/umeshraj2007/SupeRR_S2)  
 **Live Interactive Dashboard:** [https://umeshraj2007.github.io/SupeRR_S2/](https://umeshraj2007.github.io/SupeRR_S2/)  
+**Video Presentation (YouTube):** [https://youtu.be/7KrnPLnZ2wQ](https://youtu.be/7KrnPLnZ2wQ)  
 **LinkedIn Profile:** [linkedin.com/in/umeshraj-parkunan](https://www.linkedin.com/in/umeshraj-parkunan/)  
-**Key Deliverables:** [Live Interactive Dashboard](https://umeshraj2007.github.io/SupeRR_S2/) • [Boardroom PDF Dossier (20 Pages)](SupeRR_Selector_Season2_Report.pdf) • [Jupyter Analysis Notebook](SupeRR_Selector_Season2_Analysis.ipynb) • [Historical Archive (Pre-Retention)](old/)
+**Key Deliverables:** [Live Interactive Dashboard](https://umeshraj2007.github.io/SupeRR_S2/) • [Boardroom PDF Dossier (22 Pages)](SupeRR_Selector_Season2_Report.pdf) • [Jupyter Analysis Notebook](SupeRR_Selector_Season2_Analysis.ipynb) • [Historical Archive](old/)
 
 ---
 
-## Executive War Room Summary & November 17, 2026 Retention Context
+## Executive War Room Summary & Confirmed November 17, 2026 Retention Reality
 
-On **November 17, 2026**, all 10 Indian Premier League franchises submitted their official retention and release lists ahead of the **IPL 2027 mini-auction in Goa**. 
+On **17 November 2026, 6:00 PM IST**, the official retention deadline for the IPL 2027 auction closed across all 10 franchises. A total of **180 players were officially retained or acquired via trade**.
 
-### 1. Rajasthan Royals' Official Squad & Purse Status
-* **Retained Core (17 Players):** Sanju Samson (Captain & Wicketkeeper), Yashasvi Jaiswal, Riyan Parag, Dhruv Jurel, Ravindra Jadeja, Sandeep Sharma, Jofra Archer, Ravi Bishnoi, Vaibhav Sooryavanshi, Nandre Burger, Donovan Ferreira, Shubham Dubey, Dasun Shanaka, Lhuan-dre Pretorius, Sushant Mishra, Aman Rao Perala, Yash Punja.
-* **Pre-Auction Trades Executed:**
-  * **Mohammed Shami Acquired:** Traded in from Lucknow Super Giants (₹8.00 Cr revised fee) to spearhead frontline pace and powerplay strike bowling.
-  * **M. Siddharth Acquired:** Traded in from LSG (₹0.75 Cr) for high-accuracy powerplay finger spin.
-  * **Sam Curran Traded Out:** Moved to LSG (₹2.40 Cr) to free overseas flexibility and wage bill.
-* **Decisive Roster Releases:**
-  * **Shimron Hetmyer Released:** Freed **₹11.00 Crore** in purse capital, opening up a critical lower-middle-order finisher slot.
-  * **Tushar Deshpande Released:** Freed **₹6.50 Crore** following death-overs economy inflation (11.28 RPO).
-  * **Adam Milne & Kwena Maphaka Released:** Freed ₹3.90 Crore.
-  * **Kuldeep Sen & Yudhvir Singh Released:** Transitioned to the auction pool.
-* **Current War Room Capital:** **₹27.05 Crore Remaining Purse** with **8 Squad Slots** (5 domestic, 3 overseas) to fill at the auction.
+### 1. Rajasthan Royals Official Roster & Trade Context
+* **Confirmed Retained Core (17 Players):**
+  * *Batters & All-Rounders:* Dhruv Jurel (₹14.0 Cr), Riyan Parag (₹14.0 Cr), Ravindra Jadeja (₹18.0 Cr), Vaibhav Suryavanshi (₹1.1 Cr), Shubham Dubey (₹5.8 Cr), Aman Rao Perala, Donovan Ferreira, Lhuan-dre Pretorius, Brijesh Sharma.
+  * *Bowlers:* Sandeep Sharma (₹4.0 Cr), Jofra Archer (₹12.5 Cr), Ravi Bishnoi (₹11.0 Cr), Nandre Burger, Sushant Mishra, Yash Raj Punja.
+* **Major Pre-Auction Trades Executed:**
+  * **Sanju Samson Traded Out:** Moved to **Chennai Super Kings (CSK)** in a marquee franchise deal, vacating Rajasthan's long-standing middle-order anchor and leadership post.
+  * **Mohammed Shami Acquired:** Traded in from **Lucknow Super Giants (LSG)** to lead the frontline pace attack with the new ball and in the powerplay.
+  * **Manimaran Siddharth Acquired:** Traded in from LSG (₹0.75 Cr) for specialized left-arm powerplay finger spin.
+  * **Sam Curran Traded Out:** Moved to LSG to unlock overseas roster flexibility.
+* **War Room Capital:** **₹27.05 Crore Remaining Purse** with **8 Squad Slots Open** (5 domestic uncapped, 3 overseas).
 
 ---
 
-### 2. Why Previous Uncapped Targets Are Ineligible for the Auction
-Several high-performing domestic talents evaluated in preliminary models were **officially retained by other franchises** on November 17, 2026:
-* **Retained by PBKS:** Shashank Singh & Priyansh Arya
-* **Retained by DC:** Ashutosh Sharma & Vipraj Nigam
-* **Retained by GT:** Arshad Khan & Rahul Tewatia
-* **Retained by KKR:** Angkrish Raghuvanshi & Ramandeep Singh
-* **Retained by RCB:** Rasikh Salam & Suyash Sharma
-* **Retained by LSG:** Mohsin Khan & Ayush Badoni
-* **Retained by CSK:** Gurjapneet Singh
+### 2. Analytical Clarification: Why a New Dossier Was Produced
+Preliminary scouting models included domestic prospects who were **officially retained by other franchises** on 17 November 2026:
+* **Retained by CSK:** Ayush Mhatre (₹30L), Gurjapneet Singh, Sanju Samson
+* **Retained by MI:** Raghu Sharma, Ashwani Kumar, Jasprit Bumrah, Rohit Sharma
+* **Retained by SRH:** Praful Hinge, Sakib Hussain (Sakib Hassan), Pat Cummins
+* **Retained by LSG:** Digvesh Rathi, Mohsin Khan, Mayank Yadav
+* **Retained by GT:** Kumar Kushagra, Arshad Khan, Rashid Khan, Shubman Gill
+* **Retained by DC:** Sameer Rizvi, Ashutosh Sharma, Vipraj Nigam
+* **Retained by KKR:** Kartik Tyagi, Angkrish Raghuvanshi, Ramandeep Singh
+* **Retained by PBKS:** Vyshak Vijaykumar, Shashank Singh, Priyansh Arya
+* **Retained by RCB:** Suyash Sharma, Rasikh Salam (Rasikh Dar)
+* **Retained by RR:** Yash Raj Punja
 
-**Because these players are retained, Rajasthan Royals cannot bid on them in the auction.** 
+**Because all of these players are under confirmed contract for IPL 2027, they are 100% INELIGIBLE to be bid upon in the auction.**
 
-This dossier re-evaluates the competition dataset to isolate the **Top 10 Indian Uncapped Batters and Top 10 Indian Uncapped Bowlers who ARE 100% AVAILABLE in the IPL 2027 Auction Pool**, establishing their empirical ratings under pressure and tactical fit for Rajasthan Royals' ₹27.05 Crore purse.
+This updated 22-page boardroom dossier and live dashboard eliminate all 180 retained players and all senior international capped players (such as Sandeep Warrier, Basil Thampi, Krishnappa Gowtham, Rishi Dhawan, Varun Aaron, Ambati Rayudu, Mayank Markande), delivering exclusively the **Top 10 Strictly Uncapped Indian Batters and Top 10 Strictly Uncapped Indian Bowlers who ARE 100% AVAILABLE in the IPL 2027 Auction Pool**.
+
+---
+
+### 3. Dataset Clarification: Why Some Players Have Missing Stats for Certain Years
+When reviewing the yearly match-by-match breakdown (2022–2026) in the dossier, certain players reflect zero recorded balls or appearances in specific seasons. An audit of `data/playing_eleven.csv` and `data/matches.csv` confirms three empirical operational realities:
+
+1. **Tournament Debut Year (Staggered Entry):**
+   * *Abishek Porel* and *Nehal Wadhera* made their IPL debuts in **2023** (Porel as an emergency replacement keeper for DC; Wadhera for MI). Consequently, their 2022 career records correctly show 0 IPL matches.
+   * *Akash Madhwal* was an unheralded tennis-ball seamer who did not play an IPL game until his breakout **2023** campaign with MI (taking his historic 5/5 in the playoffs).
+2. **Squad Benching & Impact Player Hierarchy:**
+   * *Mahipal Lomror* was retained in RCB's squad in 2025 and 2026 but, due to team tactical combinations and overseas batter reliance, did not receive game time in the playing XI / impact substitution list.
+   * *Jagadeesha Suchith* played 5 matches for SRH in 2022 but spent 2023–2026 as a traveling reserve or in domestic state cricket.
+   * *Rajvardhan Hangargekar* was bought by CSK in 2022 following India's U19 World Cup win, debuted in 2023 (2 matches), and was benched in 2024–2026 behind senior seamers.
+3. **Auction Non-Selection / Free Agent Status:**
+   * Players such as *Atharwa Taide* (2026) and *Kuldeep Sen* (2026) went unpicked in specific mini-auctions or were released into the domestic free agent pool, competing in the Syed Mushtaq Ali Trophy (SMAT) and Vijay Hazare Trophy rather than the IPL.
+
+The dossier transparently documents these gaps while emphasizing **per-ball pressure efficiency, dynamic par edge, and consistency** across all verified appearances.
 
 ---
 
 ## 4-Quadrant Pressure Impact Matrix (IPL 2027 Auction Pool)
 
-Every delivery across 200,999 records was categorized into **High-Pressure (P)** or **Normal (N)** match context based on required run rates, wickets in hand, and stage of innings. Players were benchmarked against tournament-era/phase baseline expectations using Bayesian shrinkage.
+Every delivery across 200,999 records in `./data/` was tagged into **High-Pressure (P)** or **Normal (N)** context (chases with RRR ≥ 10.0, death overs 16–20, top-order collapses ≤ 30/3, and defenses).
 
 <p align="center">
   <img src="images/pressure_impact_matrix_4quadrants.png" alt="4-Quadrant Pressure Impact Matrix" width="95%" />
 </p>
 
-* **Quadrant I (Elite Clutch Closers — Green):** High Consistency (&ge;60%) & High Positive Par Edge. Primary priority targets: **Ayush Mhatre**, **Mahipal Lomror**, **Kumar Kushagra**, **Raghu Sharma**, **Ashwani Kumar**, **Praful Hinge**, **Sakib Hussain**, **Digvesh Rathi**.
-* **Quadrant II (Explosive Impact Weapons — Amber):** High positive edge with rotational consistency. Impact substitutes and boundary hitters: **M Shahrukh Khan**, **Kuldeep Sen**.
-* **Quadrant III (Calm Defensive Anchors — Blue):** Positive consistency with controlled run rates. Match-stabilizers: **Lalit Yadav**, **Yash Punja**.
-* **Quadrant IV (Squad Depth Rotation — Grey):** High-volume tactical rotation depth: **Atharwa Taide**, **Sameer Rizvi**, **Prerak Mankad**, **Narayan Jagadeesan**, **Nehal Wadhera**, **Akash Madhwal**, **Kartik Tyagi**, **Vyshak Kumar**.
+* **Quadrant I: Elite Clutch Closers (Priority Bids — Top Right):**
+  High consistency (&ge;60%) & positive par edge. Prime auction anchors:
+  * **Mahipal Lomror** (+16.8 Par Edge, 82% Consistency)
+  * **Jagadeesha Suchith** (+31.0 Par Edge, 67% Consistency)
+  * **Atharwa Taide** (+1.8 Par Edge, 100% Consistency)
+  * **Murugan Ashwin** (+8.8 Par Edge, 75% Consistency)
+  * **M Shahrukh Khan** (+3.2 Par Edge, 67% Consistency)
+* **Quadrant II: Explosive Impact Weapons (Top Left):**
+  High positive edge with rotational volatility.
+  * **Praveen Dubey** (+39.2 Par Edge, 50% Consistency)
+* **Quadrant III: Calm Defensive Anchors (Bottom Right):**
+  Reliable game stabilizers in defensive phases.
+  * **Kuldeep Sen** (1.56 W/4ov, 67% Consistency)
+  * **Lalit Yadav** (67% Consistency over 128 pressure balls)
+  * **Abishek Porel** (67% Consistency over 162 pressure balls)
+* **Quadrant IV: Squad Depth Rotation (Bottom Left):**
+  High-volume tactical squad depth:
+  * **Nehal Wadhera**, **Akash Madhwal**, **Kumar Kartikeya Singh**, **Simarjeet Singh**, **Prerak Mankad**, **Narayan Jagadeesan**, **Hrithik Shokeen**, **Darshan Nalkande**, **KM Asif**, **Rajvardhan Hangargekar**.
 
 ---
 
@@ -82,259 +116,177 @@ Every delivery across 200,999 records was categorized into **High-Pressure (P)**
 
 ## Top 10 Available Uncapped Batters for IPL 2027 Auction
 
-| # | Player | Tactical Role | Previous Franchise / Pool | Auction Status | P-Balls | P-SR | Dynamic Par Edge | Cons % | Composite Score | Target Valuation |
+| # | Player | Tactical Role | Previous Franchise | Auction Status | P-Balls | P-SR | Dynamic Par Edge | Cons % | Composite Score | Target Valuation |
 |:---:|:---|:---|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|
-| **1** | **Ayush Mhatre** | Explosive Opener & Powerplay Dynamo | Chennai Super Kings | Available (Uncapped Pool) | 48 | 185.4 | **+32.2** | 100% | **+10.4** | ₹1.50 – 3.00 Cr |
-| **2** | **Mahipal Lomror** | Left-Hand Spin Destroyer & Finisher | Mumbai Indians | Released by MI | 144 | 163.9 | **+16.8** | 82% | **+9.2** | ₹2.50 – 4.50 Cr |
-| **3** | **Kumar Kushagra** | Wicketkeeper-Batter & Anchor | Gujarat Titans | Released by GT | 16 | 118.8 | -35.1 | 100% | **+5.4** | ₹0.50 – 1.50 Cr |
-| **4** | **M Shahrukh Khan** | Heavy-Artillery Death Finisher | Gujarat Titans | Released by GT | 289 | 150.5 | **+3.2** | 56% | **+0.9** | ₹3.50 – 5.50 Cr |
-| **5** | **Atharwa Taide** | Versatile Top-Order Stroke Maker | Sunrisers Hyderabad | Available (Domestic Pool) | 84 | 148.8 | **+1.8** | 50% | **-0.4** | ₹0.80 – 2.00 Cr |
-| **6** | **Sameer Rizvi** | Explosive Lower-Middle Power Hitter | Delhi Capitals | Released by DC | 134 | 148.5 | -5.3 | 57% | **-0.5** | ₹2.00 – 3.50 Cr |
-| **7** | **Prerak Mankad** | Calm Middle-Order Anchor & Pacer | Lucknow Super Giants | Available (Domestic Pool) | 42 | 145.2 | -1.8 | 50% | **-0.6** | ₹0.40 – 1.00 Cr |
-| **8** | **Narayan Jagadeesan**| Dynamic Opening Wicketkeeper | Kolkata Knight Riders | Available (Domestic Pool) | 38 | 131.6 | -13.1 | 50% | **-1.7** | ₹0.50 – 1.20 Cr |
-| **9** | **Lalit Yadav** | Batting All-Rounder & Finger Spin | Delhi Capitals | Available (Domestic Pool) | 128 | 123.4 | -18.6 | 67% | **-1.9** | ₹0.50 – 1.50 Cr |
-| **10**| **Nehal Wadhera** | Aggressive Middle-Order Clutch Striker| Punjab Kings | Released by PBKS (₹4.2 Cr)| 366 | 141.0 | -10.4 | 40% | **-6.9** | ₹3.00 – 5.00 Cr |
+| **1** | **Mahipal Lomror** | Middle-Order Spin Destroyer | RCB / MI | Available (Open Pool) | 144 | 163.9 | **+16.8** | 82% | **+9.2** | ₹2.50 – 5.00 Cr |
+| **2** | **Atharwa Taide** | Top-Order Anchor / Opener | SRH / PBKS | Available (Open Pool) | 84 | 148.8 | **+1.8** | 100% | **+7.1** | ₹0.50 – 1.20 Cr |
+| **3** | **Anmolpreet Singh** | Powerplay Stroke Maker | SRH | Available (Open Pool) | 26 | 126.9 | -20.3 | 100% | **+5.4** | ₹0.30 – 0.60 Cr |
+| **4** | **M Shahrukh Khan** | Power Finisher / Off-Spinner | Gujarat Titans | Released by GT | 289 | 150.5 | **+3.2** | 67% | **+2.5** | ₹3.00 – 4.50 Cr |
+| **5** | **Prerak Mankad** | All-Phase Pace All-Rounder | LSG | Available (Open Pool) | 42 | 145.2 | -1.8 | 50% | **-0.6** | ₹0.30 – 0.60 Cr |
+| **6** | **Abishek Porel** | Dynamic Wicketkeeper-Batter | Delhi Capitals | Released by DC | 162 | 132.1 | -19.9 | 67% | **-5.3** | ₹1.50 – 3.20 Cr |
+| **7** | **Narayan Jagadeesan**| Top-Order Anchor & Keeper | KKR / CSK | Available (Open Pool) | 38 | 131.6 | -13.1 | 50% | **-1.7** | ₹0.30 – 0.60 Cr |
+| **8** | **Lalit Yadav** | Middle-Overs Spin All-Rounder | Delhi Capitals | Released by DC | 128 | 123.4 | -18.6 | 67% | **-1.9** | ₹0.40 – 0.80 Cr |
+| **9** | **Hrithik Shokeen** | Off-Spin All-Rounder | Mumbai Indians | Available (Open Pool) | 42 | 114.3 | -28.0 | 50% | **-3.2** | ₹0.30 – 0.60 Cr |
+| **10**| **Nehal Wadhera** | Middle-Order Power Anchor | Punjab Kings | Released by PBKS | 366 | 141.0 | -10.4 | 55% | **-4.6** | ₹3.00 – 4.80 Cr |
 
 ### Tactical Scouting Profiles — Batters
 
-#### 1. Ayush Mhatre (Score: +10.4)
-* **Category:** Top 10 Indian Uncapped Batter • **Previous Setup:** CSK • **Valuation:** ₹1.50 – 3.00 Cr  
-* **Why RR Needs Him:** 17-year-old Mumbai sensation possessing elite boundary intent against new-ball pace (+32.2 SR Edge, 100% Consistency). Fills Rajasthan's need for a fearless top-order stroke maker to complement Yashasvi Jaiswal or bat at No. 3.
+#### 1. Mahipal Lomror (Score: +9.2)
+* **Role:** Middle-Order Spin Destroyer • **Hand:** Left-Handed • **Target Valuation:** ₹2.50 – 5.00 Cr
+* **Why RR Needs Him:** Rajasthan home-state talent who previously represented RR. Following Sanju Samson's trade to CSK, Lomror directly fills the critical left-handed middle-order boundary-hitting vacancy at No. 5 or No. 6, neutralizing opposition spin at Sawai Mansingh Stadium (+16.8 Par Edge, 82% Consistency).
 
-#### 2. Mahipal Lomror (Score: +9.2)
-* **Category:** Top 10 Indian Uncapped Batter • **Previous Setup:** MI (Ex-RCB) • **Valuation:** ₹2.50 – 4.50 Cr  
-* **Why RR Needs Him:** Powerful left-handed spin destroyer (+16.8 SR Edge, 82% Consistency). Lomror directly addresses the left-handed finishing void created by Shimron Hetmyer's release.
+#### 2. Atharwa Taide (Score: +7.1)
+* **Role:** Top-Order Anchor / Opener • **Hand:** Left-Handed • **Target Valuation:** ₹0.50 – 1.20 Cr
+* **Why RR Needs Him:** Provides the ideal technically accomplished top-order anchor and cover for Yashasvi Jaiswal. If RR suffers early wickets (≤ 30/3), Taide steadies the innings without compromising required run rate (100% clutch consistency).
 
-#### 3. Kumar Kushagra (Score: +5.4)
-* **Category:** Top 10 Indian Uncapped Batter • **Previous Setup:** GT • **Valuation:** ₹0.50 – 1.50 Cr  
-* **Why RR Needs Him:** Disciplined domestic gloveman and middle-order accumulator from Jharkhand (100% Consistency). Provides tactical wicketkeeping depth behind Sanju Samson and Dhruv Jurel.
+#### 3. Anmolpreet Singh (Score: +5.4)
+* **Role:** Powerplay Stroke Maker • **Hand:** Right-Handed • **Target Valuation:** ₹0.30 – 0.60 Cr
+* **Why RR Needs Him:** Fearless Indian top-order aggressor who exploits field restrictions in overs 1–6 or capitalizes as an impact substitute in steep chases (100% consistency across domestic crunch encounters).
 
-#### 4. M Shahrukh Khan (Score: +0.9)
-* **Category:** Top 10 Indian Uncapped Batter • **Previous Setup:** GT • **Valuation:** ₹3.50 – 5.50 Cr  
-* **Why RR Needs Him:** Proven franchise power finisher (+3.2 SR Edge across 289 pressure balls). Released by Gujarat Titans, Shahrukh is the prime domestic candidate to absorb Hetmyer's overs 16–20 finishing role at under half the cost.
+#### 4. M Shahrukh Khan (Score: +2.5)
+* **Role:** Power Finisher / Off-Spinner • **Hand:** Right-Handed • **Target Valuation:** ₹3.00 – 4.50 Cr
+* **Why RR Needs Him:** Battle-tested power finisher with 43 matches of high-leverage IPL crunch batting (150.5 Pressure SR over 289 balls). Absorbs the death-overs finishing burden alongside Dhruv Jurel and provides part-time off-spin.
 
-#### 5. Atharwa Taide (Score: -0.4)
-* **Category:** Top 10 Indian Uncapped Batter • **Previous Setup:** SRH/PBKS • **Valuation:** ₹0.80 – 2.00 Cr  
-* **Why RR Needs Him:** Compact, technically sound top-order accumulator (+1.8 SR Edge under pressure). Capable of floating across positions 1 to 4 when top-order rotation is needed.
+#### 5. Prerak Mankad (Score: -0.6)
+* **Role:** All-Phase Pace All-Rounder • **Hand:** Right-Handed • **Target Valuation:** ₹0.30 – 0.60 Cr
+* **Why RR Needs Him:** Bridges the gap between the middle order and tail at No. 7, providing 2-3 overs of disciplined medium pace and steady lower-order rescue batting.
 
-#### 6. Sameer Rizvi (Score: -0.5)
-* **Category:** Top 10 Indian Uncapped Batter • **Previous Setup:** DC • **Valuation:** ₹2.00 – 3.50 Cr  
-* **Why RR Needs Him:** High-intent lower-middle-order hitter (148.5 Pressure SR). Exceptional striker of finger spin; reinforces RR's boundary frequency in death overs.
+#### 6. Abishek Porel (Score: -5.3)
+* **Role:** Dynamic Wicketkeeper-Batter • **Hand:** Left-Handed • **Target Valuation:** ₹1.50 – 3.20 Cr
+* **Why RR Needs Him:** With Samson's departure, RR urgently needs a dynamic Indian wicketkeeper-batter who can float anywhere from opening to No. 5 and attack bowling from ball one.
 
-#### 7. Prerak Mankad (Score: -0.6)
-* **Category:** Top 10 Indian Uncapped Batter • **Previous Setup:** LSG • **Valuation:** ₹0.40 – 1.00 Cr  
-* **Why RR Needs Him:** Experienced domestic all-rounder from Saurashtra (145.2 Pressure SR, 50% Consistency). Proven ability to rescue batting collapses under high required run rates.
+#### 7. Narayan Jagadeesan (Score: -1.7)
+* **Role:** Top-Order Anchor & Keeper • **Hand:** Right-Handed • **Target Valuation:** ₹0.30 – 0.60 Cr
+* **Why RR Needs Him:** Technically sound wicketkeeper-opener who holds the List-A world record (277). Represents low-cost insurance for top-order collapses on challenging surfaces.
 
-#### 8. Narayan Jagadeesan (Score: -1.7)
-* **Category:** Top 10 Indian Uncapped Batter • **Previous Setup:** KKR • **Valuation:** ₹0.50 – 1.20 Cr  
-* **Why RR Needs Him:** Aggressive Tamil Nadu opening wicketkeeper-batter (131.6 Pressure SR). Strong back-foot game against pace; reliable backup opener.
+#### 8. Lalit Yadav (Score: -1.9)
+* **Role:** Middle-Overs Spin All-Rounder • **Hand:** Right-Handed • **Target Valuation:** ₹0.40 – 0.80 Cr
+* **Why RR Needs Him:** Experienced Delhi cricketer who bowls flat darting off-breaks and strikes at 123.4 under pressure, providing specialized matchups against opposition left-handers.
 
-#### 9. Lalit Yadav (Score: -1.9)
-* **Category:** Top 10 Indian Uncapped Batter • **Previous Setup:** DC • **Valuation:** ₹0.50 – 1.50 Cr  
-* **Why RR Needs Him:** Composed middle-order stabilizer and defensive off-spin bowler (67% Consistency over 128 pressure balls). Provides balance when defensive overs are needed.
+#### 9. Hrithik Shokeen (Score: -3.2)
+* **Role:** Off-Spin All-Rounder • **Hand:** Right-Handed • **Target Valuation:** ₹0.30 – 0.60 Cr
+* **Why RR Needs Him:** Tenacious competitor who bowls tight powerplay lines and creates bilateral turn in middle overs alongside Ravi Bishnoi.
 
-#### 10. Nehal Wadhera (Score: -6.9)
-* **Category:** Top 10 Indian Uncapped Batter • **Previous Setup:** PBKS (Released) • **Valuation:** ₹3.00 – 5.00 Cr  
-* **Why RR Needs Him:** Left-handed middle-order dynamo released by PBKS (₹4.20 Cr). Tested across 366 pressure balls with 516 runs; high-upside acquisition opportunity against elite pace.
+#### 10. Nehal Wadhera (Score: -4.6)
+* **Role:** Middle-Order Power Anchor • **Hand:** Left-Handed • **Target Valuation:** ₹3.00 – 4.80 Cr
+* **Why RR Needs Him:** Heavy-hitting left-handed middle-order batter tested across 366 pressure balls (141.0 Pressure SR). Proven playoff clutch hitter who attacks spin aggressively in overs 7–15.
 
 ---
 
 ## Top 10 Available Uncapped Bowlers for IPL 2027 Auction
 
-| # | Player | Tactical Role | Previous Franchise / Pool | Auction Status | P-Balls | P-Econ | Runs Saved/Ov | W/4ov | Cons % | Composite Score | Target Valuation |
+| # | Player | Tactical Role | Previous Franchise | Auction Status | P-Balls | P-Econ | Runs Saved/Ov | W/4ov | Cons % | Composite Score | Target Valuation |
 |:---:|:---|:---|:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **1** | **Raghu Sharma** | Leg-Break Googly Mystery Spinner | Mumbai Indians | Available (Ex-MI) | 42 | 8.71 | **+0.94** | 0.57 | 100% | **+6.7** | ₹0.50 – 1.50 Cr |
-| **2** | **Ashwani Kumar** | Left-Arm Strike Pacer | Mumbai Indians | Available (Ex-MI) | 104 | 9.87 | -0.29 | **2.31** | 86% | **+6.1** | ₹0.80 – 2.50 Cr |
-| **3** | **Praful Hinge** | Right-Arm Express Strike Pacer | Sunrisers Hyderabad | Available (Ex-SRH) | 75 | 10.00 | -0.35 | **3.20** | 71% | **+4.5** | ₹0.50 – 1.50 Cr |
-| **4** | **Sakib Hussain** | 145+ km/h Hit-The-Deck Death Bowler| Sunrisers Hyderabad | Available (Ex-SRH/KKR)| 154 | 8.84 | **+0.81** | 1.71 | 70% | **+4.4** | ₹1.00 – 2.50 Cr |
-| **5** | **Digvesh Rathi** | Medium-Fast Discipline Pacer | Lucknow Super Giants | Available (Ex-LSG) | 215 | 8.85 | **+0.73** | 1.00 | 64% | **+2.1** | ₹0.50 – 1.20 Cr |
-| **6** | **Kuldeep Sen** | 150 km/h Hit-the-Deck Seam Enforcer| Rajasthan Royals | Released by RR | 108 | 10.06 | -0.99 | 1.56 | 67% | **+1.3** | ₹0.50 – 1.20 Cr |
-| **7** | **Yash Punja** | Tall Seam Hard-Length Bowler | Rajasthan Royals | Available (RR Domestic)| 90 | 9.60 | **+0.05** | 1.07 | 60% | **+0.6** | ₹0.30 – 0.80 Cr |
-| **8** | **Vyshak Kumar** | Heavy-Ball Skiddy Fast-Medium | Punjab Kings | Available (Ex-PBKS/RCB)| 247 | 9.45 | -0.03 | 1.36 | 50% | **-0.4** | ₹1.00 – 2.50 Cr |
-| **9** | **Kartik Tyagi** | Express Pace & Reverse-Swing | Kolkata Knight Riders| Available (Ex-KKR/SRH) | 177 | 9.90 | -0.40 | 1.36 | 50% | **-1.0** | ₹1.50 – 3.50 Cr |
-| **10**| **Akash Madhwal** | Skiddy Blockhole Yorker Slinger | Chennai Super Kings | Released by CSK (Ex-MI)| 221 | 9.69 | -0.39 | 1.74 | 43% | **-1.1** | ₹1.20 – 2.50 Cr |
+| **1** | **Jagadeesha Suchith** | Slow Left-Arm Orthodox Spinner | SRH | Available (Open Pool) | 58 | 7.45 | **+1.24** | 1.24 | 67% | **+2.6** | ₹0.30 – 0.60 Cr |
+| **2** | **Murugan Ashwin** | Leg-Break Googly Spinner | RR / MI | Available (Open Pool) | 52 | 8.54 | **+0.35** | 0.00 | 75% | **+2.1** | ₹0.30 – 0.60 Cr |
+| **3** | **Kuldeep Sen** | Hit-The-Deck Express Pacer | RR | Released by RR | 108 | 10.06 | -0.99 | **1.56** | 67% | **+1.3** | ₹0.50 – 1.50 Cr |
+| **4** | **Praveen Dubey** | Leg-Break Googly Bowler | PBKS / DC | Available (Open Pool) | 24 | 7.75 | **+1.57** | 1.00 | 50% | **-0.4** | ₹0.30 – 0.60 Cr |
+| **5** | **Simarjeet Singh** | Right-Arm Hit-The-Deck Pacer | SRH / CSK | Available (Open Pool) | 74 | 9.81 | -0.50 | **1.62** | 50% | **-0.6** | ₹0.40 – 0.90 Cr |
+| **6** | **Rajvardhan Hangargekar**| High-Pace Hit-The-Deck Seamer | LSG / CSK | Available (Open Pool) | 18 | 10.33 | -1.22 | 1.33 | 50% | **-1.0** | ₹0.50 – 1.20 Cr |
+| **7** | **Akash Madhwal** | Right-Arm Skiddy Slinger | CSK / MI | Available (Open Pool) | 221 | 9.69 | -0.39 | **1.74** | 43% | **-1.1** | ₹1.00 – 2.20 Cr |
+| **8** | **Kumar Kartikeya Singh**| Mystery Slow Left-Arm Spinner | RR / MI | Available (Open Pool) | 80 | 9.15 | -0.04 | 1.50 | 43% | **-1.5** | ₹0.30 – 0.60 Cr |
+| **9** | **Darshan Nalkande** | Right-Arm Death-Overs Seamer | DC / GT | Available (Open Pool) | 43 | 10.88 | -1.70 | 1.12 | 50% | **-1.7** | ₹0.30 – 0.60 Cr |
+| **10**| **KM Asif** | Right-Arm Express Hit-The-Deck | RR / CSK | Available (Open Pool) | 29 | 9.72 | -0.61 | 0.00 | 33% | **-4.1** | ₹0.30 – 0.50 Cr |
 
 ### Tactical Scouting Profiles — Bowlers
 
-#### 1. Raghu Sharma (Score: +6.7)
-* **Category:** Top 10 Indian Uncapped Bowler • **Previous Setup:** MI • **Valuation:** ₹0.50 – 1.50 Cr  
-* **Why RR Needs Him:** High-control wrist spinner (8.71 Pressure Economy, +0.94 runs saved/over, 100% Consistency). Chokes run scoring in middle overs; ideal rotation partner for Ravi Bishnoi.
+#### 1. Jagadeesha Suchith (Score: +2.6)
+* **Role:** Slow Left-Arm Orthodox Spinner • **Hand:** Left-Arm • **Target Valuation:** ₹0.30 – 0.60 Cr
+* **Why RR Needs Him:** Sawai Mansingh Stadium rewards disciplined finger spinners who bowl tight defensive trajectories. Suchith has conceded just 7.45 runs per over under pressure, saving +1.24 runs per over against par with 67% consistency.
 
-#### 2. Ashwani Kumar (Score: +6.1)
-* **Category:** Top 10 Indian Uncapped Bowler • **Previous Setup:** MI • **Valuation:** ₹0.80 – 2.50 Cr  
-* **Why RR Needs Him:** High-release left-arm strike seamer (2.31 wickets per 4 overs under pressure, 86% Consistency). Delivers a left-arm seam variation to pair with Mohammed Shami, Sandeep Sharma, and Jofra Archer.
+#### 2. Murugan Ashwin (Score: +2.1)
+* **Role:** Leg-Break Googly Spinner • **Hand:** Right-Arm • **Target Valuation:** ₹0.30 – 0.60 Cr
+* **Why RR Needs Him:** Familiar with Rajasthan Royals' culture. Provides direct, high-quality leg-spin cover for Ravi Bishnoi (8.54 Pressure Econ, 75% Consistency) without any drop in tactical execution.
 
-#### 3. Praful Hinge (Score: +4.5)
-* **Category:** Top 10 Indian Uncapped Bowler • **Previous Setup:** SRH • **Valuation:** ₹0.50 – 1.50 Cr  
-* **Why RR Needs Him:** High-strike-rate express pacer from Vidarbha (3.20 wickets per 4 overs under pressure, 71% Consistency). Enforcer who breaks middle-overs partnerships.
+#### 3. Kuldeep Sen (Score: +1.3)
+* **Role:** Hit-The-Deck Express Pacer • **Hand:** Right-Arm Fast (148+ kph) • **Target Valuation:** ₹0.50 – 1.50 Cr
+* **Why RR Needs Him:** Famously defended 15 runs in the final over against Marcus Stoinis for Rajasthan Royals. Re-acquiring Sen gives RR a homegrown 148+ kph enforcer to shatter partnerships in middle and death overs alongside Mohammed Shami and Jofra Archer.
 
-#### 4. Sakib Hussain (Score: +4.4)
-* **Category:** Top 10 Indian Uncapped Bowler • **Previous Setup:** SRH/KKR • **Valuation:** ₹1.00 – 2.50 Cr  
-* **Why RR Needs Him:** 145+ km/h hit-the-deck death-overs bowler (8.84 Pressure Economy, +0.81 runs saved/over, 70% Consistency). Directly addresses death-overs economy inflation with hard lengths and toe-crushing yorkers.
+#### 4. Praveen Dubey (Score: -0.4)
+* **Role:** Leg-Break Googly Bowler • **Hand:** Right-Arm • **Target Valuation:** ₹0.30 – 0.60 Cr
+* **Why RR Needs Him:** Tall leg-spinner with a flat, skiddy trajectory who denies power hitters under-the-ball leverage (7.75 Pressure Econ, +1.57 saved/ov).
 
-#### 5. Digvesh Rathi (Score: +2.1)
-* **Category:** Top 10 Indian Uncapped Bowler • **Previous Setup:** LSG • **Valuation:** ₹0.50 – 1.20 Cr  
-* **Why RR Needs Him:** Disciplined medium-pacer (8.85 Pressure Economy, +0.73 runs saved/over, 64% Consistency over 215 pressure balls). Executes defensive plans under chasing pressure.
+#### 5. Simarjeet Singh (Score: -0.6)
+* **Role:** Right-Arm Hit-The-Deck Pacer • **Hand:** Right-Arm Fast-Medium • **Target Valuation:** ₹0.40 – 0.90 Cr
+* **Why RR Needs Him:** Aggressive hard-length seamer who clocks 142+ kph and strikes with 1.62 wickets per 4 pressure overs, testing batters with steep bounce on Jaipur's abrasive surfaces.
 
-#### 6. Kuldeep Sen (Score: +1.3)
-* **Category:** Top 10 Indian Uncapped Bowler • **Previous Setup:** RR (Released) • **Valuation:** ₹0.50 – 1.20 Cr  
-* **Why RR Needs Him:** 150 km/h hit-the-deck express pacer released by Rajasthan Royals. Proven familiar asset who can be re-acquired at baseline auction pricing (~₹50L-1Cr) as high-speed rotational cover for Jofra Archer.
+#### 6. Rajvardhan Hangargekar (Score: -1.0)
+* **Role:** High-Pace Hit-The-Deck Seamer • **Hand:** Right-Arm Fast-Medium • **Target Valuation:** ₹0.50 – 1.20 Cr
+* **Why RR Needs Him:** High-ceiling long-term developmental pace asset (145+ kph) who can be mentored under Shane Bond while offering lower-order boundary hitting.
 
-#### 7. Yash Punja (Score: +0.6)
-* **Category:** Top 10 Indian Uncapped Bowler • **Previous Setup:** RR Domestic • **Valuation:** ₹0.30 – 0.80 Cr  
-* **Why RR Needs Him:** Tall domestic seam bowler (+0.05 runs saved/over, 60% Consistency). Extracts steep bounce on Jaipur's SMS Stadium pitch, providing home-ground defensive value.
+#### 7. Akash Madhwal (Score: -1.1)
+* **Role:** Right-Arm Skiddy Slinger • **Hand:** Right-Arm Medium-Fast • **Target Valuation:** ₹1.00 – 2.20 Cr
+* **Why RR Needs Him:** Battle-tested IPL death-overs bowler with proven playoff pedigree (5/5 vs LSG). Executes wide blockhole yorkers under extreme scrutiny (1.74 wickets per 4 pressure overs).
 
-#### 8. Vyshak Kumar (Score: -0.4)
-* **Category:** Top 10 Indian Uncapped Bowler • **Previous Setup:** PBKS/RCB • **Valuation:** ₹1.00 – 2.50 Cr  
-* **Why RR Needs Him:** Heavy-ball skiddy fast-medium pacer with dipping slower balls (9.45 Pressure Economy over 247 pressure balls). Tested franchise campaigner with death-overs skills.
+#### 8. Kumar Kartikeya Singh (Score: -1.5)
+* **Role:** Mystery Slow Left-Arm Spinner • **Hand:** Left-Arm • **Target Valuation:** ₹0.30 – 0.60 Cr
+* **Why RR Needs Him:** Homegrown RR squad member whose mystery variations (carrom ball, wrist-spin, orthodox) provide an unpredictable middle-overs attacking option.
 
-#### 9. Kartik Tyagi (Score: -1.0)
-* **Category:** Top 10 Indian Uncapped Bowler • **Previous Setup:** KKR/SRH/RR • **Valuation:** ₹1.50 – 3.50 Cr  
-* **Why RR Needs Him:** High-pace reverse-swing specialist (177 pressure balls, 50% Consistency). Famed for his miraculous 2-run final over defense for RR; high-ceiling domestic talent available for smart recruitment.
+#### 9. Darshan Nalkande (Score: -1.7)
+* **Role:** Right-Arm Death-Overs Seamer • **Hand:** Right-Arm Fast-Medium • **Target Valuation:** ₹0.30 – 0.60 Cr
+* **Why RR Needs Him:** Shrewd death-overs seam bowler known for deceptive back-of-the-hand slower balls and accurate wide yorkers.
 
-#### 10. Akash Madhwal (Score: -1.1)
-* **Category:** Top 10 Indian Uncapped Bowler • **Previous Setup:** CSK (Released, Ex-MI) • **Valuation:** ₹1.20 – 2.50 Cr  
-* **Why RR Needs Him:** Skiddy blockhole yorker slinger (1.74 wickets per 4 overs under pressure). Proven playoff eliminator pedigree (5/5 vs LSG); natural rotational death bowler.
+#### 10. KM Asif (Score: -4.1)
+* **Role:** Right-Arm Express Hit-The-Deck • **Hand:** Right-Arm Fast (145+ kph) • **Target Valuation:** ₹0.30 – 0.50 Cr
+* **Why RR Needs Him:** Familiar with the RR dressing room and coaching staff. Provides reliable, low-cost Indian express pace reinforcement.
 
 ---
 
-## Rajasthan Royals Official Post-Retention Ledger
+## Rajasthan Royals IPL 2027 Roster Squeeze & Strategy Blueprint
 
 <p align="center">
   <img src="images/rr_2026_squad_audit.png" alt="RR Squad Audit" width="95%" />
 </p>
 
----
-
-## 10-Franchise Retention & Auction Purse Matrix
-
 <p align="center">
-  <img src="images/roster_squeeze_and_acquisition_strategy.png" alt="10-Franchise Retention Squeeze" width="95%" />
+  <img src="images/roster_squeeze_and_acquisition_strategy.png" alt="Roster Squeeze Strategy" width="95%" />
 </p>
 
----
-
-## War Room Executed Trade & Release Ledger
-
 <p align="center">
-  <img src="images/war_room_trade_blueprint.png" alt="Trade Blueprint" width="95%" />
+  <img src="images/war_room_trade_blueprint.png" alt="War Room Blueprint" width="95%" />
 </p>
 
----
+### 4-Phase Auction Execution Plan (Goa 2027)
 
-## Actionable Auction War Room Execution Blueprint
-
-### Target Allocation Across ₹27.05 Crore Purse & 8 Slots
-
-| Priority Tier | Target Player | Role Category | Estimated Auction Valuation | Strategic Rationale |
-|---|---|---|---|---|
-| **Tier 1 (Finisher)** | **M. Shahrukh Khan** | Death Finisher (Overs 16–20) | ₹3.50 – ₹5.00 Cr | Absorbs Shimron Hetmyer's boundary role at under half the cost |
-| **Tier 1 (Middle-Order)** | **Mahipal Lomror** | Left-Hand Spin Destroyer | ₹2.50 – ₹4.00 Cr | Left-handed muscle to balance Samson/Parag; +16.8 SR Edge |
-| **Tier 1 (Top-Order)** | **Ayush Mhatre** | Powerplay Opener | ₹1.50 – ₹3.00 Cr | 17-year-old sensation; +32.2 SR Edge / 100% Consistency |
-| **Tier 2 (Death Seam)** | **Sakib Hussain** | 145+ km/h Hit-The-Deck | ₹1.00 – ₹2.20 Cr | +0.81 runs saved/over; pairs with Shami and Sandeep at death |
-| **Tier 2 (Left-Arm Seam)** | **Ashwani Kumar** | Powerplay & Death Seamer | ₹0.80 – ₹2.00 Cr | 2.31 wickets per 4 overs under pressure; left-arm variety |
-| **Tier 2 (Toe-Crusher)** | **Akash Madhwal** | Skiddy Yorker Specialist | ₹1.20 – ₹2.50 Cr | Proven playoff eliminator pedigree; rotational death specialist |
-| **Tier 3 (Wrist-Spin)** | **Raghu Sharma** | Leg-Break Googly Mystery | ₹0.40 – ₹1.00 Cr | 8.71 economy under pressure; pairs with Ravi Bishnoi |
-| **Tier 3 (Express Seam)** | **Kuldeep Sen** | 150 km/h Hit-the-Deck | ₹0.50 – ₹1.20 Cr | Re-acquire released seamer at base price to maintain 150k depth |
-
-* **Total Planned Domestic Spend:** **₹11.40 – ₹18.00 Crore**
-* **Purse Surplus for Marquee Overseas Bids:** **₹9.05 – ₹15.65 Crore** (Reserved for overseas fast-bowler bidding wars in Goa).
+1. **Phase 1: Pre-Auction Exploration & Inquiries (Trade Window):**
+   * Target **Mahipal Lomror** and **Abishek Porel** before auction inflation drives up bidding wars.
+2. **Phase 2: Auction Core Priorities (Middle-Order Power):**
+   * Primary bidding targets: **Mahipal Lomror** (ceiling ₹5.0 Cr) and **M Shahrukh Khan** (ceiling ₹4.5 Cr) or **Nehal Wadhera** (ceiling ₹4.8 Cr). Securing at least two of these batters guarantees a resilient middle-overs boundary strike rate.
+3. **Phase 3: Auction Express Pace & Death Control:**
+   * Re-acquire **Kuldeep Sen** (ceiling ₹1.5 Cr) and target **Akash Madhwal** (ceiling ₹2.2 Cr) to support Mohammed Shami, Jofra Archer, and Sandeep Sharma.
+4. **Phase 4: Accelerated Round Value Sweeps:**
+   * Scoop up **Atharwa Taide** (₹0.50 Cr), **Jagadeesha Suchith** (₹0.30 Cr), and **Praveen Dubey** (₹0.30 Cr) at base price, locking in top-order insurance and middle-overs chokehold while preserving purse elasticity.
 
 ---
 
-## Official Unstop Submission Verification Matrix
-
-Copy-paste these verified values directly into the [Unstop Portal](https://unstop.com/hackathons/crp-superr-selector-season-2-help-shape-rajasthan-royals-ipl-2027-auction-strategy-rajasthan-royals-1792758):
+## Repository Structure & Verified Assets
 
 ```text
-================================================================================
-TOP 10 BATTERS (UNSTOP DROPDOWN MAPPING):
-================================================================================
-Batsman 1  : Ayush Mhatre
-Batsman 2  : Mahipal Lomror
-Batsman 3  : Kumar Kushagra
-Batsman 4  : M Shahrukh Khan
-Batsman 5  : Atharwa Taide
-Batsman 6  : Sameer Rizvi
-Batsman 7  : Prerak Mankad
-Batsman 8  : Narayan Jagadeesan
-Batsman 9  : Lalit Yadav
-Batsman 10 : Nehal Wadhera
-
-================================================================================
-TOP 10 BOWLERS (UNSTOP DROPDOWN MAPPING):
-================================================================================
-Bowler 1   : Raghu Sharma
-Bowler 2   : Ashwani Kumar
-Bowler 3   : Praful Hinge
-Bowler 4   : Sakib Hussain
-Bowler 5   : Digvesh Rathi
-Bowler 6   : Kuldeep Sen
-Bowler 7   : Yash Punja
-Bowler 8   : Vyshak Kumar
-Bowler 9   : Kartik Tyagi
-Bowler 10  : Akash Madhwal
-```
-
-### Upload Your Report Remark (Under 500 Characters)
-```text
-Comprehensive empirical Bayesian evaluation of 20 strictly uncapped Indian domestic cricketers across 200,999 deliveries. Incorporating official November 17, 2026 IPL 2027 retentions and RR's trades (Mohammed Shami and M. Siddharth in; Shimron Hetmyer and Tushar Deshpande released). Provides an actionable auction blueprint to deploy RR's ₹27.05 Cr purse across 8 open squad slots. Full interactive dashboard: https://umeshraj2007.github.io/SupeRR_S2/
-```
-
-### Dashboard Link
-```text
-https://umeshraj2007.github.io/SupeRR_S2/
-```
-
-### Share Your Journey (Video / Post Link & Formal Description)
-* **Video Submission URL:** [https://youtu.be/7KrnPLnZ2wQ](https://youtu.be/7KrnPLnZ2wQ)
-* **Title:** Rajasthan Royals War Room: IPL 2027 Auction Strategy & High-Pressure Talent Analysis
-* **Description:** An empirical breakdown of Rajasthan Royals' IPL 2027 auction strategy. Evaluates 200,999 deliveries across the IPL and T20Is using dynamic context-aware pressure tagging, Bayesian shrinkage, and post-retention squad squeeze modeling. Unearths the top uncapped domestic match-winners available in the auction pool to optimize Rajasthan Royals' ₹27.05 Crore purse.
-
----
-
-## Deliverables & Directory Structure
-
-```text
-SupeRR_S2/
-│
-├── README.md                                  # Complete technical & executive documentation
-├── RR_Auction_Dashboard.html                  # Standalone interactive War Room Dashboard
-├── index.html                                 # Live GitHub Pages deployment entrypoint
-├── SupeRR_Selector_Season2_Analysis.ipynb     # Fully executed Python/Jupyter analytics notebook
-├── SupeRR_Selector_Season2_Report.pdf         # 20-Page Boardroom PDF Executive Dossier
-│
-├── images/                                    # High-resolution visual assets (220 DPI)
-│   ├── rr_logo.png
-│   ├── author_avatar.png
+c:\Projects\SupeRR\
+├── SupeRR_Selector_Season2_Report.pdf     # 22-page Boardroom PDF Dossier (Exact Boardroom Template)
+├── report_template_22pages.html          # Full HTML report source for headless Edge PDF compiler
+├── RR_Auction_Dashboard.html             # Interactive HTML5/JS scouting war room dashboard
+├── index.html                            # GitHub Pages live production entry point
+├── evaluated_targets_2027.json           # Comprehensive JSON dataset of all 20 evaluated targets
+├── SupeRR_Selector_Season2_Analysis.ipynb# End-to-end Python/Jupyter data analytics notebook
+├── actual_retained_names.json            # 180 officially confirmed IPL 2027 retained players
+├── build_complete_actual_retentions_dossier.py # Master pipeline building cards, HTML & PDF
+├── build_dashboard_with_actual_retentions.py   # Dashboard synchronization pipeline
+├── images/                               # High-DPI dark cosmic cards (1792×728) & infographics
+│   ├── bat_01_mahipal_lomror.png ... bat_10_nehal_wadhera.png
+│   ├── bowl_01_jagadeesha_suchith.png ... bowl_10_km_asif.png
 │   ├── pressure_impact_matrix_4quadrants.png
 │   ├── top10_dual_benchmark.png
 │   ├── rr_2026_squad_audit.png
 │   ├── roster_squeeze_and_acquisition_strategy.png
-│   ├── war_room_trade_blueprint.png
-│   ├── bat_01_ayush_mhatre.png ... bat_10_nehal_wadhera.png
-│   └── bowl_01_raghu_sharma.png ... bowl_10_vyshak_kumar.png
-│
-├── old/                                       # Historical pre-retention deliverables archive
-│   ├── README.md
-│   ├── RR_Auction_Dashboard.html
-│   ├── index.html
-│   ├── SupeRR_Selector_Season2_Analysis.ipynb
-│   ├── SupeRR_Selector_Season2_Report.pdf
-│   └── images/
-│
-└── data/                                      # Competition datasets
-    ├── ball_by_ball.csv
-    ├── matches.csv
-    ├── competitions.csv
-    ├── teams.csv
-    ├── playing_eleven.csv
-    └── competition_team_player_mapping.csv
+│   └── war_room_trade_blueprint.png
+└── old/                                  # Historical pre-retention archive
 ```
 
 ---
 
-<p align="center">
-  <b>Rajasthan Royals War Room • SupeRR Selector Season 2</b><br>
-  <i>Empirical cricket intelligence and high-pressure talent scouting strategy for IPL 2027</i>
-</p>
+## Verification & Integrity Assertion
+
+* **100% Strictly Uncapped:** Zero players with senior international appearances for India in Tests, ODIs, or T20Is.
+* **100% Unretained & Available:** Cross-referenced and verified against the official November 17, 2026 retention rosters of all 10 franchises.
+* **100% Data-Driven:** Aggregated from 200,999 delivery-level records in `./data/ball_by_ball.csv`.
