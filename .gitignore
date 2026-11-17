@@ -1,0 +1,18 @@
+# Raw match dataset (Protected under Unstop competition rules)
+data/
+data/**
+
+# Intermediate video production assets & large MP4 renders (hosted on YouTube)
+video-production/
+video-production/**
+
+# Agent framework & cache
+.agents/
+.agents/**
+skills-lock.json
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
+*.tmp
+.ipynb_checkpoints/
