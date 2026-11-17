@@ -1507,21 +1507,21 @@ function drawScatterPlot() {
   let playersToPlot = [];
 
   if (currentScatterMode === "bat") {
-    yMin = -15; yMax = 55; yZero = 0;
+    yMin = -35; yMax = 25; yZero = 0;
     yLabel = "Batting Strike Rate Edge vs Par (Runs per 100 Balls Above Par)";
     playersToPlot = PLAYERS.filter(p => p.primary_mode === "bat");
   } else if (currentScatterMode === "bowl") {
-    yMin = -0.80; yMax = 1.80; yZero = 0;
+    yMin = -2.00; yMax = 2.00; yZero = 0;
     yLabel = "Bowling Runs Saved per Over vs Par (Conceded Below Par RPO)";
     playersToPlot = PLAYERS.filter(p => p.primary_mode === "bowl");
   } else {
     // Combined View: Bowlers scaled x25 for intuitive visual comparability
-    yMin = -15; yMax = 55; yZero = 0;
+    yMin = -50; yMax = 50; yZero = 0;
     yLabel = "Dynamic Par Edge (Batters: SR Edge | Bowlers: Saved/Ov × 25)";
     playersToPlot = PLAYERS;
   }
 
-  const xMin = 33, xMax = 108;
+  const xMin = -6, xMax = 104;
   const toX = val => m.left + ((val - xMin) / (xMax - xMin)) * pw;
   const toY = val => m.top + ph - ((val - yMin) / (yMax - yMin)) * ph;
 
@@ -1546,34 +1546,35 @@ function drawScatterPlot() {
   ctx.fillRect(m.left, midY, midX - m.left, m.top + ph - midY);
 
   // Quadrant Overlay Watermark Labels (Inset to prevent point collisions)
-  ctx.font = "bold 9.5pt Montserrat, sans-serif";
+  ctx.font = "bold 9pt Montserrat, sans-serif";
+  ctx.textBaseline = "middle";
   ctx.textAlign = "right";
-  ctx.fillStyle = "rgba(16, 185, 129, 0.75)";
-  ctx.fillText("QUADRANT I: ELITE CLUTCH CLOSERS (Priority Bids)", m.left + pw - 12, m.top + 20);
+  ctx.fillStyle = "rgba(16, 185, 129, 0.80)";
+  ctx.fillText("QUADRANT I: ELITE CLUTCH CLOSERS (Priority Bids)", m.left + pw - 12, m.top + 16);
 
   ctx.textAlign = "left";
-  ctx.fillStyle = "rgba(217, 119, 6, 0.75)";
-  ctx.fillText("QUADRANT II: EXPLOSIVE IMPACT WEAPONS", m.left + 12, m.top + 20);
+  ctx.fillStyle = "rgba(217, 119, 6, 0.80)";
+  ctx.fillText("QUADRANT II: EXPLOSIVE IMPACT WEAPONS", m.left + 12, m.top + 16);
 
   ctx.textAlign = "right";
-  ctx.fillStyle = "rgba(37, 99, 235, 0.75)";
-  ctx.fillText("QUADRANT III: CALM DEFENSIVE ANCHORS", m.left + pw - 12, m.top + ph - 8);
+  ctx.fillStyle = "rgba(37, 99, 235, 0.80)";
+  ctx.fillText("QUADRANT III: CALM DEFENSIVE ANCHORS", m.left + pw - 12, m.top + ph - 12);
 
   ctx.textAlign = "left";
-  ctx.fillStyle = "rgba(100, 116, 139, 0.75)";
-  ctx.fillText("QUADRANT IV: SQUAD DEPTH ROTATION", m.left + 12, m.top + ph - 8);
+  ctx.fillStyle = "rgba(100, 116, 139, 0.80)";
+  ctx.fillText("QUADRANT IV: SQUAD DEPTH ROTATION", m.left + 12, m.top + ph - 12);
 
   // Grid Lines
   ctx.strokeStyle = "#E2E8F0";
   ctx.lineWidth = 1;
   ctx.beginPath();
-  for (let x = 40; x <= 100; x += 10) {
+  for (let x = 0; x <= 100; x += 10) {
     const px = toX(x);
     ctx.moveTo(px, m.top);
     ctx.lineTo(px, m.top + ph);
   }
-  const yStep = (currentScatterMode === "bowl") ? 0.40 : 10;
-  for (let y = yMin; y <= yMax; y += yStep) {
+  const yStep = (currentScatterMode === "bowl") ? 0.50 : 10;
+  for (let y = Math.ceil(yMin / yStep) * yStep; y <= yMax + 1e-6; y += yStep) {
     const py = toY(y);
     ctx.moveTo(m.left, py);
     ctx.lineTo(m.left + pw, py);
@@ -1598,15 +1599,16 @@ function drawScatterPlot() {
   ctx.fillStyle = "#64748B";
   ctx.font = "bold 8.2pt Montserrat, sans-serif";
   ctx.textAlign = "center";
-  for (let x = 40; x <= 100; x += 10) {
+  ctx.textBaseline = "alphabetic";
+  for (let x = 0; x <= 100; x += 10) {
     ctx.fillText(`${x}%`, toX(x), m.top + ph + 18);
   }
   ctx.fillText("Consistency Rating (% of High-Pressure Matches Delivering Positive Par Edge)", m.left + pw / 2, m.top + ph + 38);
 
   ctx.textAlign = "right";
-  for (let y = yMin; y <= yMax; y += yStep) {
+  for (let y = Math.ceil(yMin / yStep) * yStep; y <= yMax + 1e-6; y += yStep) {
     const py = toY(y);
-    const yStr = (currentScatterMode === "bowl") ? `${y >= 0 ? '+' : ''}${y.toFixed(2)}` : `${y >= 0 ? '+' : ''}${Math.round(y)}`;
+    const yStr = (currentScatterMode === "bowl") ? `${y > 0 ? '+' : ''}${y.toFixed(2)}` : `${y > 0 ? '+' : ''}${Math.round(y)}`;
     ctx.fillText(yStr, m.left - 8, py + 4);
   }
 
@@ -1618,28 +1620,28 @@ function drawScatterPlot() {
   ctx.fillText(yLabel, 0, 0);
   ctx.restore();
 
-  // Specific label offsets to prevent ANY text collision
-    const labelConfig = {
-    "Mahipal Lomror": { text: "Mahipal Lomror", ha: "center", va: "bottom", dx: 0, dy: -18 },
-    "Atharwa Taide": { text: "Atharwa Taide", ha: "right", va: "center", dx: -16, dy: 0 },
-    "Anmolpreet Singh": { text: "Anmolpreet", ha: "left", va: "center", dx: 16, dy: 0 },
-    "M Shahrukh Khan": { text: "M. Shahrukh", ha: "left", va: "center", dx: 16, dy: 0 },
-    "Prerak Mankad": { text: "Prerak Mankad", ha: "right", va: "center", dx: -16, dy: 0 },
-    "Abishek Porel": { text: "Abishek Porel", ha: "right", va: "center", dx: -16, dy: -4 },
-    "Narayan Jagadeesan": { text: "N. Jagadeesan", ha: "right", va: "center", dx: -16, dy: 4 },
-    "Lalit Yadav": { text: "Lalit Yadav", ha: "left", va: "center", dx: 16, dy: -4 },
-    "Hrithik Shokeen": { text: "Hrithik Shokeen", ha: "right", va: "center", dx: -16, dy: 0 },
-    "Nehal Wadhera": { text: "Nehal Wadhera", ha: "center", va: "bottom", dx: 0, dy: -18 },
-    "Jagadeesha Suchith": { text: "J. Suchith", ha: "left", va: "center", dx: 16, dy: 0 },
-    "Murugan Ashwin": { text: "M. Ashwin", ha: "left", va: "center", dx: 16, dy: 0 },
-    "Kuldeep Sen": { text: "Kuldeep Sen", ha: "left", va: "center", dx: 16, dy: 0 },
-    "Praveen Dubey": { text: "Praveen Dubey", ha: "right", va: "center", dx: -16, dy: 0 },
-    "Simarjeet Singh": { text: "Simarjeet Singh", ha: "left", va: "center", dx: 16, dy: 0 },
-    "Rajvardhan Hangargekar": { text: "Hangargekar", ha: "left", va: "center", dx: 16, dy: 0 },
-    "Akash Madhwal": { text: "Akash Madhwal", ha: "left", va: "center", dx: 16, dy: -4 },
-    "Kumar Kartikeya Singh": { text: "K. Kartikeya", ha: "right", va: "center", dx: -16, dy: 0 },
-    "Darshan Nalkande": { text: "Darshan Nalkande", ha: "left", va: "center", dx: 16, dy: 0 },
-    "KM Asif": { text: "KM Asif", ha: "right", va: "center", dx: -16, dy: 0 }
+  // Collision-free absolute data-space label coordinates (scaled per mode)
+  const labelPosAll = {
+    "Mahipal Lomror":         { lx: 82, ly:  24.0, ha: "center" },
+    "Jagadeesha Suchith":     { lx: 67, ly:  37.5, ha: "center" },
+    "Murugan Ashwin":         { lx: 82, ly:   8.8, ha: "left"   },
+    "Praveen Dubey":          { lx: 40, ly:  39.2, ha: "right"  },
+    "M Shahrukh Khan":        { lx: 56, ly:  14.0, ha: "center" },
+    "Atharwa Taide":          { lx: 35, ly:  11.5, ha: "right"  },
+    "Kumar Kartikeya Singh":  { lx: 26, ly:   3.0, ha: "right"  },
+    "Prerak Mankad":          { lx: 28, ly:  -4.0, ha: "right"  },
+    "Akash Madhwal":          { lx: 25, ly: -10.0, ha: "right"  },
+    "Nehal Wadhera":          { lx: 22, ly: -16.5, ha: "right"  },
+    "Simarjeet Singh":        { lx: 65, ly:  -9.0, ha: "left"   },
+    "Narayan Jagadeesan":     { lx: 34, ly: -24.5, ha: "right"  },
+    "KM Asif":                { lx: 16, ly: -24.0, ha: "right"  },
+    "Abishek Porel":          { lx: 30, ly: -32.5, ha: "right"  },
+    "Anmolpreet Singh":       { lx:  3, ly: -12.5, ha: "left"   },
+    "Hrithik Shokeen":        { lx:  3, ly: -36.5, ha: "left"   },
+    "Lalit Yadav":            { lx: 75, ly: -17.5, ha: "left"   },
+    "Kuldeep Sen":            { lx: 75, ly: -26.5, ha: "left"   },
+    "Rajvardhan Hangargekar": { lx: 64, ly: -34.0, ha: "left"   },
+    "Darshan Nalkande":       { lx: 64, ly: -43.0, ha: "left"   }
   };
 
   // Plot Players
@@ -1657,14 +1659,36 @@ function drawScatterPlot() {
     }
 
     const balls = modeObj.p_balls;
-    const radius = Math.max(7, Math.min(20, Math.sqrt(balls) * 0.85));
+    const radius = Math.max(7, Math.min(18, Math.sqrt(balls) * 0.80));
 
     const px = toX(xVal);
     const py = toY(yVal);
 
+    // Determine label target position
+    const pos = labelPosAll[p.name];
+    let lx, ly, ha;
+    if (pos) {
+      lx = toX(pos.lx);
+      const yTarget = (currentScatterMode === "bowl") ? (pos.ly / 25.0) : Math.max(yMin + 3, Math.min(yMax - 3, pos.ly));
+      ly = toY(yTarget);
+      ha = pos.ha;
+    } else {
+      lx = px + radius + 8;
+      ly = py;
+      ha = "left";
+    }
+
+    // Subtle leader line
+    ctx.strokeStyle = "#94A3B8";
+    ctx.lineWidth = 1.0;
+    ctx.beginPath();
+    ctx.moveTo(px, py);
+    ctx.lineTo(lx, ly);
+    ctx.stroke();
+
     // Glowing bubble fill
-    ctx.fillStyle = isBat ? "rgba(229, 6, 149, 0.85)" : "rgba(18, 38, 170, 0.85)";
-    ctx.strokeStyle = isBat ? "#9D174D" : "#1E3A8A";
+    ctx.fillStyle = isBat ? "rgba(229, 6, 149, 0.88)" : "rgba(18, 38, 170, 0.88)";
+    ctx.strokeStyle = "#FFFFFF";
     ctx.lineWidth = 1.8;
 
     ctx.beginPath();
@@ -1672,38 +1696,30 @@ function drawScatterPlot() {
     ctx.fill();
     ctx.stroke();
 
-    // Determine label configuration
-    const cfg = labelConfig[p.name] || {
-      text: p.name.split(' ')[0],
-      ha: "left",
-      va: "center",
-      dx: radius + 4,
-      dy: 0
-    };
+    ctx.font = "bold 8.2pt Montserrat, sans-serif";
+    ctx.textAlign = ha;
+    ctx.textBaseline = "middle";
 
-    const lx = px + cfg.dx;
-    const ly = py + cfg.dy;
-
-    ctx.font = "bold 8.5pt Montserrat, sans-serif";
-    ctx.textAlign = cfg.ha;
-    ctx.textBaseline = cfg.va === "bottom" ? "bottom" : (cfg.va === "top" ? "top" : "middle");
-
-    // Measure text for subtle protective pill background
-    const metrics = ctx.measureText(cfg.text);
+    // Measure text for clean protective pill background
+    const labelText = p.name;
+    const metrics = ctx.measureText(labelText);
     const tw = metrics.width;
-    const th = 13;
+    const th = 14;
     let bx = lx;
-    if (cfg.ha === "right") bx = lx - tw - 3;
-    else if (cfg.ha === "center") bx = lx - tw / 2 - 3;
-    else bx = lx - 3;
+    if (ha === "right") bx = lx - tw - 4;
+    else if (ha === "center") bx = lx - tw / 2 - 4;
+    else bx = lx - 4;
     let by = ly - th / 2 - 1;
 
-    ctx.fillStyle = "rgba(255, 255, 255, 0.75)";
-    ctx.fillRect(bx, by, tw + 6, th + 2);
+    ctx.fillStyle = "rgba(255, 255, 255, 0.92)";
+    ctx.strokeStyle = "#E2E8F0";
+    ctx.lineWidth = 0.8;
+    ctx.fillRect(bx, by, tw + 8, th + 2);
+    ctx.strokeRect(bx, by, tw + 8, th + 2);
 
     // Text render
     ctx.fillStyle = isBat ? "#831843" : "#1E3A8A";
-    ctx.fillText(cfg.text, lx, ly);
+    ctx.fillText(labelText, lx, ly);
   });
 }
 
