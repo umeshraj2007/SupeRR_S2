@@ -43,17 +43,16 @@
     transition: background 0.25s ease, color 0.25s ease;
   }
 
-  /* HEADER & TOP NAVBAR */
+  /* UNIFIED HEADER & TOP NAVBAR */
   header {
     background: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
-    padding: 10px 24px;
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 10px rgba(2, 29, 69, 0.04);
+    box-shadow: 0 4px 20px rgba(2, 29, 69, 0.05);
   }
   .hdr-inner {
     max-width: 1440px;
@@ -61,7 +60,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 18px;
+    gap: 16px;
+    padding: 10px 24px 8px 24px;
     flex-wrap: nowrap;
   }
   .logo-block {
@@ -201,8 +201,7 @@
     .author-block { padding: 4px 10px 4px 6px; }
   }
   @media (max-width: 768px) {
-    header { padding: 8px 16px; }
-    .hdr-inner { flex-wrap: wrap; justify-content: center; }
+    .hdr-inner { flex-wrap: wrap; justify-content: center; padding: 8px 16px; }
     .author-block { display: none; }
   }
   .icon-svg {
@@ -217,14 +216,11 @@
     vertical-align: middle;
   }
 
-  /* NAVIGATION TABS */
-  .nav-bar {
+  /* INTEGRATED NAVIGATION ROW */
+  .nav-row {
+    border-top: 1px solid var(--border);
     background: var(--surface);
-    border-bottom: 1px solid var(--border);
     padding: 0 24px;
-    position: sticky;
-    top: 61px;
-    z-index: 90;
   }
   .nav-inner {
     max-width: 1440px;
@@ -238,8 +234,8 @@
     display: none;
   }
   .nav-tab {
-    padding: 10px 16px;
-    font-size: 8.4pt;
+    padding: 9px 16px;
+    font-size: 8.3pt;
     font-weight: 700;
     color: var(--text-muted);
     border-bottom: 3px solid transparent;
@@ -767,6 +763,7 @@
 <body>
 
 <!-- HEADER -->
+<!-- UNIFIED PROFESSIONAL STICKY HEADER & NAVBAR -->
 <header>
   <div class="hdr-inner">
     <div class="logo-block">
@@ -797,12 +794,9 @@
       </a>
     </div>
   </div>
-</header>
-
-<!-- NAVIGATION TABS -->
-<div class="nav-bar">
-  <div class="nav-inner">
-    <button class="nav-tab active" onclick="switchTab('tab-cards')">
+  <nav class="nav-row">
+    <div class="nav-inner">
+      <button class="nav-tab active" onclick="switchTab('tab-cards')">
       <svg class="icon-svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
       Top 20 Targets
     </button>
@@ -826,8 +820,9 @@
       <svg class="icon-svg" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
       Statistical Matrix
     </button>
-  </div>
-</div>
+    </div>
+  </nav>
+</header>
 
 <main>
 
@@ -989,28 +984,28 @@
         </thead>
         <tbody>
           <tr>
-            <td><strong>Trade Window 1 (Pre-Retention)</strong></td>
-            <td><strong>Ashwani Kumar</strong> (LSG)<br><strong>Ayush Mhatre</strong> (PBKS)</td>
-            <td>Direct cash trade or player swap; budget ₹7.5–9.0 Cr</td>
-            <td>Locks in India’s most reliable left-arm pressure pacer and explosive LH top-order firepower before open auction inflation.</td>
+            <td><strong>Phase 1: Pre-Auction Trades</strong></td>
+            <td><strong>Mahipal Lomror</strong> (RCB)<br><strong>Abishek Porel</strong> (DC)</td>
+            <td>Pre-auction inquiry / trade; budget ₹4.0–6.5 Cr</td>
+            <td>Locks in elite left-handed middle-order spin hitting (+16.8 SR Edge) and dynamic wicketkeeping cover post-Samson exit.</td>
           </tr>
           <tr>
-            <td><strong>Trade Window 2 (Post-Retention)</strong></td>
-            <td><strong>Sakib Hussain</strong> (SRH)<br><strong>Vipraj Nigam</strong> (DC)</td>
-            <td>Exploit SRH/DC 25-man roster cuts; budget ₹1.0–1.5 Cr</td>
-            <td>Acquires 90mph reverse-swing depth and high-SR leg-spin all-rounder at baseline prices without bidding competition.</td>
+            <td><strong>Phase 2: Core Auction Priorities</strong></td>
+            <td><strong>M. Shahrukh Khan</strong><br><strong>Nehal Wadhera</strong></td>
+            <td>Aggressive bidding priority; ceiling ₹7.0–9.5 Cr</td>
+            <td>Provides certified domestic death finishing power to insulate Dhruv Jurel and absorb high-leverage closing demands.</td>
           </tr>
           <tr>
-            <td><strong>Auction Day (Goa): Tier 1</strong></td>
-            <td><strong>M. Shahrukh Khan</strong><br><strong>Sakib Hussain</strong></td>
-            <td>Primary bidding priority; ceiling ₹8.0–10.0 Cr each</td>
-            <td>Provides world-class closing reliability at the death for both innings, giving RR complete match-winning pedigree.</td>
+            <td><strong>Phase 3: Express Seam Enforcers</strong></td>
+            <td><strong>Kuldeep Sen</strong> (148+ kph)<br><strong>Akash Madhwal</strong></td>
+            <td>Targeted seam allocation; budget ₹3.5–5.0 Cr</td>
+            <td>Re-acquires 148+ kph hostility and precision death yorkers to rotate with Mohammed Shami, Jofra Archer, and Sandeep Sharma.</td>
           </tr>
           <tr>
-            <td><strong>Auction Day (Goa): Value Buys</strong></td>
-            <td><strong>Atharwa Taide</strong> (FA)<br><strong>Ashwani Kumar</strong> (MI)<br><strong>Raghu Sharma</strong> (MI)</td>
-            <td>Late-round accelerated sweeps; budget ₹30L–₹60L each</td>
-            <td>Completes the 25-man squad with 100% and 71% verified pressure consistency performers, preserving purse elasticity.</td>
+            <td><strong>Phase 4: Accelerated Value Sweeps</strong></td>
+            <td><strong>Atharwa Taide</strong><br><strong>Jagadeesha Suchith</strong><br><strong>Praveen Dubey</strong><br><strong>KM Asif</strong></td>
+            <td>Late-round accelerated sweeps; budget ₹1.5–3.0 Cr</td>
+            <td>Completes the 25-man squad with 100% and 80% verified pressure consistency anchors at base prices, preserving purse elasticity.</td>
           </tr>
         </tbody>
       </table>
@@ -1035,7 +1030,7 @@
 
     <!-- Concluding Takeaway Box -->
     <div style="background: var(--pink-soft); border-left: 4px solid var(--pink); border-radius: 0 8px 8px 0; padding: 12px 16px; margin-top: 14px; font-size: 8.5pt; color: var(--text); line-height: 1.45;">
-      <strong>Concluding War Room Directive:</strong> Season 1 showed that identifying Vignesh Puthur early led directly to an IPL signing. In Season 2, executing trades for <strong>Ashwani Kumar</strong> and <strong>Ayush Mhatre</strong>, followed by decisive bidding for <strong>M. Shahrukh Khan</strong> and <strong>Sakib Hussain</strong>, gives Rajasthan Royals the most clutch, data-backed domestic foundation for IPL 2027.
+      <strong>Concluding War Room Directive:</strong> Season 1 showed that identifying Vignesh Puthur early led directly to an IPL signing. In Season 2, targeting <strong>Mahipal Lomror</strong> and <strong>Abishek Porel</strong> in pre-auction inquiries, followed by aggressive bidding for <strong>M. Shahrukh Khan</strong> and pace enforcement via <strong>Kuldeep Sen</strong> and <strong>Akash Madhwal</strong>, gives Rajasthan Royals the most clutch, data-backed domestic foundation for IPL 2027 following Sanju Samson's trade to CSK.
     </div>
   </section>
 
@@ -1080,10 +1075,10 @@
         <div class="expl-card">
           <h4>How to Interpret the 4 Tactical Quadrants</h4>
           <ul>
-            <li><strong style="color:var(--pink);">Quadrant I (Top-Right) — Elite Clutch Closers:</strong> High Edge + High Consistency. <em>Priority Auction Targets</em>. Deliver game-winning performances repeatedly (e.g., M. Shahrukh Khan +15.1 Edge / 74% Cons; Ayush Mhatre +49.3 Edge; Ashwani Kumar +1.04 Saved/Ov).</li>
-            <li><strong style="color:var(--amber);">Quadrant II (Top-Left) — High-Impact Volatiles:</strong> Outstanding peak boundary hitting or wicket-taking strike rates, but lower consistency (e.g., Mahipal Lomror, Praful Hinge).</li>
-            <li><strong style="color:var(--blue);">Quadrant III (Bottom-Right) — Calm Par Anchors:</strong> Flawless 100% consistency with low dot-ball percentages, protecting against middle-order collapses (e.g., Atharwa Taide, Raghu Sharma, Arshad Khan).</li>
-            <li><strong style="color:var(--text-muted);">Quadrant IV (Bottom-Left) — Rotation Depth:</strong> High-upside squad depth options (e.g., Nehal Wadhera, Angkrish Raghuvanshi).</li>
+            <li><strong style="color:var(--pink);">Quadrant I (Top-Right) — Elite Clutch Closers:</strong> High Edge + High Consistency (≥ 60%). <em>Priority Auction Targets</em>. Deliver game-winning performances repeatedly under maximum leverage (e.g., Mahipal Lomror +16.8 SR Edge / 82% Cons; Jagadeesha Suchith +3.42 Saved/Ov / 100% Cons; Murugan Ashwin +1.10 Saved/Ov / 80% Cons; Kuldeep Sen +0.70 Saved/Ov / 67% Cons).</li>
+            <li><strong style="color:var(--amber);">Quadrant II (Top-Left) — Explosive Impact Weapons:</strong> Outstanding peak boundary hitting and strike capabilities with volatile leverage demands (e.g., M. Shahrukh Khan +3.0 SR Edge / 56% Cons; Abishek Porel -0.8 SR Edge / 58% Cons).</li>
+            <li><strong style="color:var(--blue);">Quadrant III (Bottom-Right) — Calm Par Anchors:</strong> High consistency (≥ 60%) and steady phase control, protecting against collapses (e.g., Atharwa Taide +1.7 SR Edge / 60% Cons; Praveen Dubey +0.40 Saved/Ov / 75% Cons; Simarjeet Singh +0.25 Saved/Ov / 60% Cons; Narayan Jagadeesan 67% Cons).</li>
+            <li><strong style="color:var(--text-muted);">Quadrant IV (Bottom-Left) — Squad Depth Rotation:</strong> High-upside rotational options and situational specialists (e.g., Nehal Wadhera, Akash Madhwal, Rajvardhan Hangargekar, Lalit Yadav, Hrithik Shokeen, Darshan Nalkande, KM Asif).</li>
           </ul>
         </div>
       </div>
